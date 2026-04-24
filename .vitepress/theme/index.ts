@@ -8,16 +8,7 @@ import "./bprogress.css";
 // @ts-ignore: 允许在没有 .vue 类型声明时导入 .vue 文件
 import BackToTop from "./components/backtotop.vue";
 import "./style.css";
-
-function githubTheme() {
-  document.querySelectorAll(".custom-block-title").forEach((el) => {
-    // console.log("Change custom-block-title");
-    el.textContent = el.textContent.replace(/INFO/gi, "Info");
-    el.textContent = el.textContent.replace(/TIP/gi, "Tip");
-    el.textContent = el.textContent.replace(/WARNING/gi, "Warning");
-    el.textContent = el.textContent.replace(/DANGER/gi, "Danger");
-  });
-}
+import "vitepress-theme-islands"
 
 export default {
   extends: DefaultTheme,
@@ -30,7 +21,6 @@ export default {
     };
     onMounted(() => {
       initZoom();
-      githubTheme();
     });
     watch(
       () => route.path,
@@ -51,7 +41,6 @@ export default {
         BProgress.start(); // 开始进度条
       };
       router.onAfterRouteChange = () => {
-        githubTheme();
         BProgress.done(); // 停止进度条
       };
     }
