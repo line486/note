@@ -58,8 +58,8 @@ img {
 
 :root {
     --vp-font-family-mono:
-            "JetBrains Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
-            monospace, var(--vp-font-family-base);
+        "JetBrains Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
+        monospace, var(--vp-font-family-base);
 
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);

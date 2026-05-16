@@ -393,11 +393,11 @@ const getMessage = (msg) =>{
 ```vue
 <script setup>
 // 2.通过defineEmits编译器宏生成emit方法
-const emit = defineEmits(['get-message'])
+const emit = defineEmits(["get-message"]);
 const sendMsg = () => {
     // 3.触发自定义事件并传递参数
-    emit('get-message', 'this is son msg')
-}
+    emit("get-message", "this is son msg");
+};
 </script>
 
 <template>
@@ -460,7 +460,7 @@ defineExpose({
 顶层组件
 
 ```js
-provide('key', "顶层组件中的数据")
+provide("key", "顶层组件中的数据");
 ```
 
 底层组件
@@ -478,7 +478,7 @@ const message = inject("key");
 顶层组件
 
 ```js
-provide('key', "ref对象")
+provide("key", "ref对象");
 ```
 
 底层组件
