@@ -5,10 +5,10 @@ import DefaultTheme from "vitepress/theme";
 import { h, nextTick, onMounted, watch } from "vue";
 import { BProgress } from "./bprogress";
 import "./bprogress.css";
-// @ts-ignore: 允许在没有 .vue 类型声明时导入 .vue 文件
-import "vitepress-theme-islands";
 import BackToTop from "./components/backtotop.vue";
 import "./style.css";
+// organize-imports-ignore
+import "vitepress-theme-round";
 
 export default {
   extends: DefaultTheme,

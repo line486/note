@@ -186,38 +186,41 @@ have 可以作为助动词，也可以是实义动词“有”
 ### 一、 五大基本句型
 
 1. **主语无需承受者（宾语）**
-   - 结构：主语 + 不及物动词
-   - 例：The rabbit slept. (兔子睡了)
+    - 结构：主语 + 不及物动词
+    - 例：The rabbit slept. (兔子睡了)
 
 2. **一个宾语，无补充信息**
-   - 结构：主语 + 谓语动词 + 宾语
-   - 例：The rabbit ate a carrot. (兔子吃了一根胡萝卜)
+    - 结构：主语 + 谓语动词 + 宾语
+    - 例：The rabbit ate a carrot. (兔子吃了一根胡萝卜)
 
 3. **两个宾语**
-   - 结构：主语 + 双及物动词 + 间接宾语 + 直接宾语
-   - 例：The rabbit gave them a carrot. (兔子给了他们一根胡萝卜)
+    - 结构：主语 + 双及物动词 + 间接宾语 + 直接宾语
+    - 例：The rabbit gave them a carrot. (兔子给了他们一根胡萝卜)
 
 4. **一个宾语 + 补充信息**
-   - 结构：主语 + 复杂及物动词 + 宾语 + 宾语补语
-   - 例：The rabbit considered the carrot tasty. (兔子认为这胡萝卜好吃)
+    - 结构：主语 + 复杂及物动词 + 宾语 + 宾语补语
+    - 例：The rabbit considered the carrot tasty. (兔子认为这胡萝卜好吃)
 
 5. **赋予信息**
-   - 结构：主语 + 系动词 + 主语补语/表语
-   - 例：The rabbit is smart. (兔子很聪明)
+    - 结构：主语 + 系动词 + 主语补语/表语
+    - 例：The rabbit is smart. (兔子很聪明)
 
 ### 二、 动词分类
 
 #### 1. 及物动词 vs 不及物动词
+
 - **及物动词**：动作是有对象的，即需要带宾语（承受者）。
 - **不及物动词**：动作没有对象，无需承受者（宾语）。
 
 #### 2. 实义动词（按状态/动作划分）
+
 - **动作动词**：如 eat
 - **状态动词**：如 have, own
 
 > **注**：实义动词可作谓语动词。
 
 #### 3. 非谓语动词（不可作谓语动词）
+
 - 不定式
 - 过去分词
 - 现在分词
@@ -240,72 +243,85 @@ look, feel, stay, become, seem, turn, appear, grow 等。
 **定义**：谓语动词本身往往无法独立表达某些语法概念，需要其他词的辅助。这些辅助构成谓语动词，但自己本身不能做谓语动词的词，就是助动词。
 
 **助动词的两个基本特征**：
+
 1. 辅助主动词
 2. 不能像主动词那样单独作谓语动词
 
 #### （一） 基本助动词
+
 1. **be**（存在）：构成进行时。
-   - 例：The rabbit is eating a carrot.
+    - 例：The rabbit is eating a carrot.
 2. **do**（做）：构成疑问、否定或强调（还可作实义动词）。
-   - 例：The rabbit does like carrots. (构成强调)
+    - 例：The rabbit does like carrots. (构成强调)
 3. **have**（有）：构成完成时。
-   - 例：The rabbit has eaten a carrot.
+    - 例：The rabbit has eaten a carrot.
 
 #### （二） 情态助动词（情态动词）
 
 **情态动词的两个基本特征**：
+
 1. 起辅助主动词的作用
 2. 不能单独作谓语动词
 
 > 因此，情态动词也是助动词的一种，也可称"情态助动词"。
 
 ##### 1. can / could
+
 - **有能力做/会/可以**：I can kill a wolf. (表示有能力，但不一定会做)
 - **表请求或许可**：Can I borrow your book? Yes, of course. (could 比 can 更诚恳些)
 - **表可能性**：Anything can happen. / Anything could happen. (can 表可能，could 表对过去的推测和现在的可能)
 
 ##### 2. may / might
+
 - **表请求或许可**：May/Might I borrow your book? Yes, of course. (might 比 may 更礼貌)
 - **表可能性**（可能性程度小于 can/could）：The rabbit isn't there. He may be at home.
 - **表祝愿**：May you succeed! (祝你成功)
 
 ##### 3. must
+
 - **表必需**：You must finish your work.
 - **表禁止**：You must not / mustn't smoke. (禁止吸烟。must not 不是"不必须"，而是"必须不！")
 - **表推测**：The light is on. The rabbit must be at home.
-  - **否定推测**：The light isn't on. The rabbit can't be at home. (否定推测用 can't)
+    - **否定推测**：The light isn't on. The rabbit can't be at home. (否定推测用 can't)
 
 ##### 4. will / would
+
 - **构成将来时**：The rabbit will eat a carrot. / The rabbit would eat a carrot.
 - **表示请求、建议**：Will you lend me that book? (是否愿意) / Would you please...?
 - **表示推测、假设**：Ask him. He would know. (他可能知道)
 
 ##### 5. shall
+
 - **构成将来时**（同 will 用法）：I shall be there at 9 AM.
 - **表示请求或征求意见**：Shall we meet at 9 AM?
 - **表警告、命令**：You shall not steal!
 
 ##### 6. should
+
 - **表应当**
 - **表有一定推测**：It should rain tomorrow.
 - **表竟然**：It's surprising that he should be late. (体现惊讶、愤怒或失望等)
 - **构成虚拟语气**
 
 ##### 7. ought to
+
 - 表应该，与 should 用法大致相同，但语气更强一些。
 - 例：We ought to treat the rabbit well.
 
 ##### 8. need
+
 - **实义动词**：需要
 - **情态动词**：有必要（否定时在 need 后加 not）
-  - 例：The rabbit need not wait.
+    - 例：The rabbit need not wait.
 
 ##### 9. dare
+
 - **实义动词**：敢，挑战，冒险
 - **情态动词**：敢
-  - 例：The rabbit dare not tell the truth to the wolf.
+    - 例：The rabbit dare not tell the truth to the wolf.
 
 ##### 10. used to
+
 - 表过去的动作，尤其是重复的动作，**强调和现在的对比**。
 - 例：The rabbit used to eat apples. Now he only eats carrots.
 - **区别**：be used to 表示习惯于。
@@ -313,23 +329,23 @@ look, feel, stay, become, seem, turn, appear, grow 等。
 ### 五、 半助动词
 
 1. **be able to**
-   - 可以表达将来的能力：I'll be able to reach school on time if I leave right now.
-   - was/were able to：成功做成某事。
+    - 可以表达将来的能力：I'll be able to reach school on time if I leave right now.
+    - was/were able to：成功做成某事。
 
 2. **be going to**
-   - 有更强的主观能动性，计划做某事。
-   - 例：I'm going to eat dinner at 6 PM today.
+    - 有更强的主观能动性，计划做某事。
+    - 例：I'm going to eat dinner at 6 PM today.
 
 3. **be about to**
-   - 马上就要做。
+    - 马上就要做。
 
 4. **be to**
-   - 被命令做某事：You are to finish homework first.
-   - 命中注定：I think they are to fall in love with each other.
+    - 被命令做某事：You are to finish homework first.
+    - 命中注定：I think they are to fall in love with each other.
 
 5. **had better** (缩写 'd better)
-   - 最好做，有忠告、警告之意。
-   - 例：You had better follow my order.
+    - 最好做，有忠告、警告之意。
+    - 例：You had better follow my order.
 
 ### 六、 使役动词
 
@@ -337,16 +353,16 @@ look, feel, stay, become, seem, turn, appear, grow 等。
 
 **最常见的四个使役动词及宾语补语情况**：
 
-| 使役动词 | 宾语补语形式 | 例句 |
-| :--- | :--- | :--- |
-| **make** | 动词原形 (裸不定式) | I make the wolf eat carrots from time to time. |
-| | 形容词 | The carrot made the wolf full. |
-| **let** | 动词原形 (裸不定式) | Let me go! |
-| | 副词 | Let him out. |
-| **have** | 动词原形 (裸不定式) | I'll have the wolf wash the dishes. (给某人任务/责任做) |
-| | 过去分词 | I have my car washed. (让某事被做) <br> I had my carrot stolen yesterday. (也可能是遭遇不幸) |
-| **get** | to 不定式 | I get the wolf to clean the kitchen after she washes dishes. (说服、鼓励做...) |
-| | 过去分词 | I got my nail done. |
+| 使役动词 | 宾语补语形式        | 例句                                                                                         |
+| :------- | :------------------ | :------------------------------------------------------------------------------------------- |
+| **make** | 动词原形 (裸不定式) | I make the wolf eat carrots from time to time.                                               |
+|          | 形容词              | The carrot made the wolf full.                                                               |
+| **let**  | 动词原形 (裸不定式) | Let me go!                                                                                   |
+|          | 副词                | Let him out.                                                                                 |
+| **have** | 动词原形 (裸不定式) | I'll have the wolf wash the dishes. (给某人任务/责任做)                                      |
+|          | 过去分词            | I have my car washed. (让某事被做) <br> I had my carrot stolen yesterday. (也可能是遭遇不幸) |
+| **get**  | to 不定式           | I get the wolf to clean the kitchen after she washes dishes. (说服、鼓励做...)               |
+|          | 过去分词            | I got my nail done.                                                                          |
 
 ### 七、 情态动词表推测（可能性大小）
 
@@ -357,6 +373,7 @@ look, feel, stay, become, seem, turn, appear, grow 等。
 > 去除过去式，即：**must > will > ought to > should > can > may**
 
 **举例说明（可能性递减）**：
+
 - **确定**：It will rain tomorrow. (明天会下雨，很确定)
 - **可能性较大**：You would give this video a thumb-up.
 - **可能**：It can rain tomorrow. (不确定，仅可能)
@@ -427,10 +444,10 @@ I'm a talking rabbit. / The rabbit likes minced carrots.
 #### 高级不定式（把不定式和状态相结合）
 
 - to be eating a carrot：to + 进行状态
-  - The rabbit seemed to be eating a carrot.
+    - The rabbit seemed to be eating a carrot.
 - to have eaten a carrot：to + 完成状态
 - to have been eating a carrot：to + 完成进行状态
-  - 这兔子之前似乎在吃一根胡萝卜（的过程中）
+    - 这兔子之前似乎在吃一根胡萝卜（的过程中）
 
 ### 三、 动名词
 
@@ -586,6 +603,7 @@ It is (high) time that you ate a carrot. [定语从句虚拟语气]
 基本结构：S + V ; S + V-s / es
 
 基本信息：
+
 - 表达事实
 - 表达习惯、重复的动作
 - 表达预计发生的事（如：The bus leaves at 8 o'clock tonight.）
@@ -595,6 +613,7 @@ It is (high) time that you ate a carrot. [定语从句虚拟语气]
 基本结构：be动词 + V-ing (现在分词)
 
 基本信息：
+
 - 表达某事在说话时正在进行。
 - 表达某些事在将来要发生。（如：We are going to Paris next week.）
 
@@ -1177,9 +1196,9 @@ it：特指上文提及的那个事物本身。
 
 几十几 (如 21)：twenty-one（十位与个位之间加连字符 -）。
 
->100：
-100：one hundred
-200：two hundred（整百基数词不加 s）
+> 100：
+> 100：one hundred
+> 200：two hundred（整百基数词不加 s）
 
 英语三位划分法：从右向左，每三位加一个逗号，依次为 thousand, million, billion。
 
@@ -1515,7 +1534,7 @@ true ➔ truly
 fast：This is a fast rabbit (adj.) ➔ This rabbit runs fast (adv.)
 hard：This is a hard carrot (adj.) ➔ I work hard (adv.)
 
-> *(注：hardly 意为"几乎不"，与 hard 意思不同)*
+> _(注：hardly 意为"几乎不"，与 hard 意思不同)_
 
 #### 4. 既是形容词也是副词
 
@@ -1940,4 +1959,3 @@ Ten miles seems like a long walk.
 ② 山脉：the Himalayas (喜马拉雅山脉)
 
 ③ 海峡、瀑布
-
