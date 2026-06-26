@@ -401,7 +401,7 @@ I'm a talking rabbit. / The rabbit likes minced carrots.
 
 有时 "to" 也可以省略（如：You helped me (to) cook the carrot.）
 
-#### ① 不定式作主语
+#### 1. 不定式作主语
 
 例：To eat a carrot every day is good for the rabbit.
 
@@ -411,7 +411,7 @@ I'm a talking rabbit. / The rabbit likes minced carrots.
 
 类似主语从句：It is good that the rabbit eats a carrot every day.
 
-#### ② 不定式作宾语
+#### 2. 不定式作宾语
 
 例：The rabbit likes to eat carrots. (谓语like，宾语to eat)
 
@@ -421,19 +421,19 @@ I'm a talking rabbit. / The rabbit likes minced carrots.
 
 感官动词与使役动词的省略：see, find, watch, have, make, let 后面用不定式作宾补时，需省略 "to"。
 
-#### ③ 不定式作主语补足语（表语）
+#### 3. 不定式作主语补足语（表语）
 
 例：The rabbit's dream is to eat every kind of carrot in the world.
 
 相当于：To eat every kind of carrot in the world is the rabbit's dream. (不定式作主语)
 
-#### ④ 不定式作定语
+#### 4. 不定式作定语
 
 例：The rabbit has a lot of carrots to eat.
 
 后置定语，修饰 carrots，表示这些胡萝卜是会被吃的。
 
-#### ⑤ 不定式作状语（表达原因、目的和结果）
+#### 5. 不定式作状语（表达原因、目的和结果）
 
 表原因：I was surprised to get a thumbs-up. = I was surprised because I got a thumbs-up. (原因状语从句)
 
@@ -453,19 +453,19 @@ I'm a talking rabbit. / The rabbit likes minced carrots.
 
 **本质**：相当于名词。**形式**：动词原形 + ing
 
-#### ① 动名词作主语
+#### 1. 动名词作主语
 
 例：Eating carrots is healthy for the rabbit. (主语 + 系动词)
 
-#### ② 动名词作主语补语（表语）
+#### 2. 动名词作主语补语（表语）
 
 例：The rabbit's hobby is growing carrots. / Seeing is believing. (眼见为实)
 
-#### ③ 动名词作定语
+#### 3. 动名词作定语
 
 例：a sleeping pill → a pill for sleeping
 
-#### ④ 动名词作宾语
+#### 4. 动名词作宾语
 
 例：The rabbit likes eating carrots.
 
@@ -499,16 +499,16 @@ forget + to do (忘记去做，未做)
 过去分词短语作定语，则要放在被修饰名词之后（后置定语）：
 The carrot cake eaten by the rabbit is delicious.
 
-#### ① 过去分词作主语补足语（表语）
+#### 1. 过去分词作主语补足语（表语）
 
 包含被动关系，被描述的是动作的接受者：
 The rabbit is interested in growing carrots. (对...感兴趣的)
 
-#### ② 过去分词作宾语补足语
+#### 2. 过去分词作宾语补足语
 
 例：The rabbit found his carrot stolen. (宾语carrot的补语)
 
-#### ③ 过去分词作状语
+#### 3. 过去分词作状语
 
 表时间/地点/条件：Seen from the hill, the carrot field looks beautiful. (从山上看，胡萝卜田看上去很美。carrot field 是 Seen 的逻辑主语，被动关系，即被看)
 
@@ -872,7 +872,7 @@ I know (that) the rabbit ate a carrot.
 
 但引导词 who, what, which, when, where, how 不可省略。有时 that 也不能省略：
 
-I didn't know that the rabbit ate the carrot and that you saw it. (我不知道：①兔子吃了，②你看见了)
+I didn't know that the rabbit ate the carrot and that you saw it. (我不知道：1.兔子吃了，2.你看见了)
 
 **(2) 否定前移**：
 
@@ -882,9 +882,9 @@ I think (that) the rabbit is smart. 否定为：I don't think (that) the rabbit 
 
 **(3) 主从时态一致**：
 
-① I don't think (that) you're right. ➔ 过去式：I didn't think (that) you were right.
-② I knew (that) the rabbit liked carrots. (主句过去，从句过去)
-③ 不变的客观现象才是例外：I knew (that) the sun rises in the east.
+1. I don't think (that) you're right. ➔ 过去式：I didn't think (that) you were right.
+2. I knew (that) the rabbit liked carrots. (主句过去，从句过去)
+3. 不变的客观现象才是例外：I knew (that) the sun rises in the east.
 
 **(4) be + adj. + that... [宾语从句]**：
 
@@ -908,9 +908,9 @@ It feels that you're not telling the truth.
 
 **同位语从句**：一个从句来充当同位语，常修饰抽象的名词（如 fact, question, idea）。
 
-① 包含已知信息：The fact that the rabbit ate a carrot did not surprise me. (主语)
-② 包含未知信息：The question whether the rabbit will eat the carrot is on all our mind. (主语，兔子是否会吃胡萝卜这个问题萦绕在我们所有人心中。)
-I have no idea who ate the carrot. (宾语，我不知道谁吃了那胡萝卜)
+1. 包含已知信息：The fact that the rabbit ate a carrot did not surprise me. (主语)
+2. 包含未知信息：The question whether the rabbit will eat the carrot is on all our mind. (主语，兔子是否会吃胡萝卜这个问题萦绕在我们所有人心中。)
+   I have no idea who ate the carrot. (宾语，我不知道谁吃了那胡萝卜)
 
 #### 5. 宾语补语从句
 
@@ -920,30 +920,30 @@ You can call me what you like. (从句充当宾语补语)
 
 #### 1. 时间状语从句
 
-① 在某一时间点之前 (before)：
-The rabbit ate a carrot at home before the wolf stopped by.
+1. 在某一时间点之前 (before)：
+   The rabbit ate a carrot at home before the wolf stopped by.
 
-② 在某一时间点之中/当时 (when, while, as)：
-when = 时间点，突然：The rabbit was eating a carrot when I reached home. (我到家时，兔子正在吃)
-while = 时间段：The rabbit was eating a carrot while I was making a video.
-as = 同时：I ate a carrot as I made a video.
+2. 在某一时间点之中/当时 (when, while, as)：
+   when = 时间点，突然：The rabbit was eating a carrot when I reached home. (我到家时，兔子正在吃)
+   while = 时间段：The rabbit was eating a carrot while I was making a video.
+   as = 同时：I ate a carrot as I made a video.
 
-③ 在某一时间点之后 (after)：
-The rabbit ate a carrot after the wolf stopped by.
+3. 在某一时间点之后 (after)：
+   The rabbit ate a carrot after the wolf stopped by.
 
-④ 从之前某一时间前开始算 (since，暗示对之后有影响)：
-The rabbit has shared 3 carrots since the wolf stopped by. (自从狼来串门，兔子已经分享3个了)
-The rabbit has not stopped sharing carrots since the wolf stopped by.
+4. 从之前某一时间前开始算 (since，暗示对之后有影响)：
+   The rabbit has shared 3 carrots since the wolf stopped by. (自从狼来串门，兔子已经分享3个了)
+   The rabbit has not stopped sharing carrots since the wolf stopped by.
 
-⑤ 直到之后的某一时间点 (until)：
-The rabbit waited until the wolf stopped by. (兔子一直在等，直到狼来串门)
-The rabbit didn't eat any carrot until the wolf stopped by.
+5. 直到之后的某一时间点 (until)：
+   The rabbit waited until the wolf stopped by. (兔子一直在等，直到狼来串门)
+   The rabbit didn't eat any carrot until the wolf stopped by.
 
-⑥ 一…就… (as soon as)：
-The rabbit will eat a carrot as soon as the wolf leaves.
+6. 一…就… (as soon as)：
+   The rabbit will eat a carrot as soon as the wolf leaves.
 
-⑦ 下次… (the next time)：
-The rabbit will share the biggest carrot the next time the wolf stops by.
+7. 下次… (the next time)：
+   The rabbit will share the biggest carrot the next time the wolf stops by.
 
 #### 2. 地点状语从句
 
@@ -1004,7 +1004,7 @@ In case you don't understand, please comment below. (如果你不明白，请在
 
 #### 6. 方式状语从句
 
-① 好像某事发生过的方式；② 好像某事正在发生的方式 (as if / as though)。
+1. 好像某事发生过的方式；2. 好像某事正在发生的方式 (as if / as though)。
 
 You spend (so much) money, as if you were a millionaire. (就好像你是百万富翁，但你并不是，所以用虚拟语气)
 
@@ -1437,40 +1437,40 @@ The rabbit is ill/well. ➔ a sick/healthy rabbit
 
 #### 2. 用法
 
-**① A 比 B 更… (比较级 + than)**
+**1. A 比 B 更… (比较级 + than)**
 
 This carrot is bigger than that one. (这根胡萝卜比那根大)
 
 倍数修饰：大三倍 ➔ This carrot is three times bigger than that one.
 程度修饰：大一点 ➔ a little bigger
 
-**② A 和 B 一样… (as + 原级 + as)**
+**2. A 和 B 一样… (as + 原级 + as)**
 
 This carrot is as big as that one.
 
 倍数修饰：是…的三倍大 ➔ This carrot is three times as big as that one.
 
-**③ 越来越… (比较级 + and + 比较级)**
+**3. 越来越… (比较级 + and + 比较级)**
 
 prettier and prettier = more and more beautiful (越来越漂亮)
 
-**④ 越…越… (the + 比较级, the + 比较级)**
+**4. 越…越… (the + 比较级, the + 比较级)**
 
 The more carrots the rabbit eats, the smarter he will become. (假设：兔子吃得越多，就会越聪明)
 The more carrots the rabbit ate, the smarter he became. (过去：兔子吃得越多，就变得越聪明)
 The more, the better. (越多越好)
 
-**⑤ 最高级 (the + 最高级 + in/of 所属范围)**
+**5. 最高级 (the + 最高级 + in/of 所属范围)**
 
 Snow White is the most beautiful woman in the world. (白雪公主是世界上最美的女人)
 
-**⑥ 序数词修饰最高级**
+**6. 序数词修饰最高级**
 
 表示"第几最…"。
 
 Who is the second fairest one of all? (谁是世上第二美的人？)
 
-**⑦ a most 表示"很，非常"**
+**7. a most 表示"很，非常"**
 
 most 前加 the 表最高级，加 a/an 表"很，非常"。
 
@@ -1703,7 +1703,7 @@ Hurry up, or else/otherwise you'll be late.
 
 将整个谓语动词提前到主语之前。
 
-**① 副词/介词短语在句首的倒装**
+**1. 副词/介词短语在句首的倒装**
 
 地点副词在句首 (here, there...)：强调动作发生。
 There goes the last bus. (末班车开走了。) ➔ 正常语序：The last bus goes there.
@@ -1717,7 +1717,7 @@ Up went the carrots into the air. (胡萝卜飞到了空中。) ➔ 正常语序
 介词短语在句首：
 主系表结构对主语进行补充说明时的倒装。
 
-**② 主语补语(表语)的倒装**
+**2. 主语补语(表语)的倒装**
 
 作表语的形容词、分词、介词短语、such 置于句首时，引起完全倒装。
 
@@ -1725,23 +1725,23 @@ Up went the carrots into the air. (胡萝卜飞到了空中。) ➔ 正常语序
 
 分离助动词和谓语动词，仅将助动词提前。
 
-**① 句首有否定意义词时的倒装**
+**1. 句首有否定意义词时的倒装**
 
 Never before have I eaten such a delicious carrot. (我以前从未吃过这么好吃的胡萝卜。) ➔ 正常语序：I have never before eaten such a delicious carrot.
 
-**② 句首有 "only" 时的倒装**
+**2. 句首有 "only" 时的倒装**
 
 Only in this way can we grow delicious carrots. (只有用这种方法我们才能种出美味的胡萝卜。)
 Only then did the rabbit meet the wolf. (只有在那时兔子才遇到了狼。)
 
-**③ "if...should..." 构成虚拟语气的倒装**
+**3. "if...should..." 构成虚拟语气的倒装**
 
 去掉 if，将 should 提前。
 
 正常虚拟语序：If I should win the lottery, I would buy a huge pile of carrots.
 倒装：Should I win the lottery, I would buy a huge pile of carrots. (如果我中了大奖，我会买一大堆胡萝卜。)
 
-**④ 固定句型中的倒装**
+**4. 固定句型中的倒装**
 
 So + 助动词/系动词/情态动词 + 主语 (表示"也一样")：
 Rabbits love eating carrots; So do wolves. (兔子爱吃胡萝卜，狼也是。)
@@ -1754,19 +1754,19 @@ The rabbit can't ride a bicycle; neither/nor can the wolf.
 
 只把强调的内容提至句首，谓语动词并不提前。
 
-**① 感叹句中的倒装**
+**1. 感叹句中的倒装**
 
 What a delicious carrot it is!
 
-**② 比较级句型中的倒装 (如 "the more..., the more...")**
+**2. 比较级句型中的倒装 (如 "the more..., the more...")**
 
 The more carrots you eat, the healthier you become. (你吃越多胡萝卜，就越健康。) = If you eat more carrots, you will become healthier.
 
-**③ "however", "whatever" 引导让步状语从句时的倒装**
+**3. "however", "whatever" 引导让步状语从句时的倒装**
 
 However long this video is, you should watch it till the end. (无论这个视频有多长，你都应该看到最后。)
 
-**④ "as", "though" 引导让步状语从句时的倒装**
+**4. "as", "though" 引导让步状语从句时的倒装**
 
 将形容词/副词/名词等提至句首。
 
@@ -1909,21 +1909,21 @@ The sheep are eating grass.
 
 **(4) 集合名词（不是盲选，看具体意义）**
 
-① 既可表集合（单数意义），又可表集合中的全部成员（复数意义）
+1. 既可表集合（单数意义），又可表集合中的全部成员（复数意义）
 
-The rabbit's family is huge. (强调"这个集合/家庭"，用单数)
-The rabbit's family are all at home. (强调"所有人/家庭成员"，用复数)
+   The rabbit's family is huge. (强调"这个集合/家庭"，用单数)
+   The rabbit's family are all at home. (强调"所有人/家庭成员"，用复数)
 
-类似名词：army, audience, police, team 等。
+   类似名词：army, audience, police, team 等。
 
-② 只能表示一个类别的事物，只能用单数谓语动词
+2. 只能表示一个类别的事物，只能用单数谓语动词
 
-All the furniture here is expensive. (家具永远不可数！)
+   All the furniture here is expensive. (家具永远不可数！)
 
-③ the + 形容词 可视作集合名词，表单/复数意义
+3. the + 形容词 可视作集合名词，表单/复数意义
 
-The young are expected to learn from the old. (表示"年轻的人们"，复数)
-The new is going to replace the old. (表示"新事物"这一抽象概念，单数)
+   The young are expected to learn from the old. (表示"年轻的人们"，复数)
+   The new is going to replace the old. (表示"新事物"这一抽象概念，单数)
 
 ### 三、 就近一致（原则）
 
@@ -1945,17 +1945,17 @@ There are two apples and a carrot on the table.
 
 #### 1. 谓语动词用单数的情况
 
-① 以 -ics 结尾的学科名称：politics, physics, mathematics, statistics 等。
+1. 以 -ics 结尾的学科名称：politics, physics, mathematics, statistics 等。
 
-② 表示金钱、时间、价格或度量衡的名词作主语时，常视作整体：
-Ten miles seems like a long walk.
+2. 表示金钱、时间、价格或度量衡的名词作主语时，常视作整体：
+   Ten miles seems like a long walk.
 
-③ 以 -sis 结尾表示疾病的词：arthritis (关节炎), diabetes (糖尿病), phlebitis (静脉炎), mumps (腮腺炎) 等。
+3. 以 -sis 结尾表示疾病的词：arthritis (关节炎), diabetes (糖尿病), phlebitis (静脉炎), mumps (腮腺炎) 等。
 
 #### 2. 谓语动词用复数的情况
 
-① 群岛：the West Indies (西印度群岛)
+1. 群岛：the West Indies (西印度群岛)
 
-② 山脉：the Himalayas (喜马拉雅山脉)
+2. 山脉：the Himalayas (喜马拉雅山脉)
 
-③ 海峡、瀑布
+3. 海峡、瀑布
