@@ -91,15 +91,15 @@ def bubble_sort(arr):
 
 ```javascript [Javascript]
 function bubbleSort(arr) {
-    let len = arr.length;
-    for (let i = 0; i < len; i++) {
-        for (let j = 0; j < len - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-            }
-        }
+  let len = arr.length;
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
     }
-    return arr;
+  }
+  return arr;
 }
 ```
 
@@ -193,19 +193,19 @@ def selection_sort(arr):
 
 ```javascript [Javascript]
 function selectionSort(arr) {
-    let len = arr.length;
-    for (let i = 0; i < len; i++) {
-        let min = i;
-        for (let j = i + 1; j < len; j++) {
-            if (arr[j] < arr[min]) {
-                min = j;
-            }
-        }
-        if (min !== i) {
-            [arr[i], arr[min]] = [arr[min], arr[i]];
-        }
+  let len = arr.length;
+  for (let i = 0; i < len; i++) {
+    let min = i;
+    for (let j = i + 1; j < len; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
     }
-    return arr;
+    if (min !== i) {
+      [arr[i], arr[min]] = [arr[min], arr[i]];
+    }
+  }
+  return arr;
 }
 ```
 
@@ -293,16 +293,16 @@ def insertion_sort(arr):
 
 ```javascript [Javascript]
 function insertionSort(arr) {
-    for (let i = 1; i < arr.length; i++) {
-        let key = arr[i];
-        let j = i - 1;
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j--;
-        }
-        arr[j + 1] = key;
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let j = i - 1;
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j--;
     }
-    return arr;
+    arr[j + 1] = key;
+  }
+  return arr;
 }
 ```
 
@@ -401,18 +401,18 @@ def shell_sort(arr):
 
 ```javascript [Javascript]
 function shellSort(arr) {
-    let len = arr.length;
-    for (let gap = Math.floor(len / 2); gap > 0; gap = Math.floor(gap / 2)) {
-        for (let i = gap; i < len; i++) {
-            let temp = arr[i];
-            let j;
-            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
-                arr[j] = arr[j - gap];
-            }
-            arr[j] = temp;
-        }
+  let len = arr.length;
+  for (let gap = Math.floor(len / 2); gap > 0; gap = Math.floor(gap / 2)) {
+    for (let i = gap; i < len; i++) {
+      let temp = arr[i];
+      let j;
+      for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
+        arr[j] = arr[j - gap];
+      }
+      arr[j] = temp;
     }
-    return arr;
+  }
+  return arr;
 }
 ```
 
@@ -625,31 +625,31 @@ def merge_sort(arr):
 
 ```javascript [Javascript]
 function mergeSort(arr) {
-    if (arr.length <= 1) return arr;
+  if (arr.length <= 1) return arr;
 
-    const mid = Math.floor(arr.length / 2);
-    const left = mergeSort(arr.slice(0, mid));
-    const right = mergeSort(arr.slice(mid));
+  const mid = Math.floor(arr.length / 2);
+  const left = mergeSort(arr.slice(0, mid));
+  const right = mergeSort(arr.slice(mid));
 
-    return merge(left, right);
+  return merge(left, right);
 }
 
 function merge(left, right) {
-    let result = [];
-    let i = 0,
-        j = 0;
+  let result = [];
+  let i = 0,
+    j = 0;
 
-    while (i < left.length && j < right.length) {
-        if (left[i] <= right[j]) {
-            result.push(left[i]);
-            i++;
-        } else {
-            result.push(right[j]);
-            j++;
-        }
+  while (i < left.length && j < right.length) {
+    if (left[i] <= right[j]) {
+      result.push(left[i]);
+      i++;
+    } else {
+      result.push(right[j]);
+      j++;
     }
+  }
 
-    return result.concat(left.slice(i)).concat(right.slice(j));
+  return result.concat(left.slice(i)).concat(right.slice(j));
 }
 ```
 
@@ -789,14 +789,14 @@ def quick_sort(arr):
 
 ```javascript [Javascript]
 function quickSort(arr) {
-    if (arr.length <= 1) return arr;
+  if (arr.length <= 1) return arr;
 
-    const pivot = arr[Math.floor(arr.length / 2)];
-    const left = arr.filter((x) => x < pivot);
-    const middle = arr.filter((x) => x === pivot);
-    const right = arr.filter((x) => x > pivot);
+  const pivot = arr[Math.floor(arr.length / 2)];
+  const left = arr.filter((x) => x < pivot);
+  const middle = arr.filter((x) => x === pivot);
+  const right = arr.filter((x) => x > pivot);
 
-    return [...quickSort(left), ...middle, ...quickSort(right)];
+  return [...quickSort(left), ...middle, ...quickSort(right)];
 }
 ```
 
@@ -983,36 +983,36 @@ def heap_sort(arr):
 
 ```javascript [Javascript]
 function heapSort(arr) {
-    let n = arr.length;
+  let n = arr.length;
 
-    for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
-        heapify(arr, n, i);
-    }
+  for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+    heapify(arr, n, i);
+  }
 
-    for (let i = n - 1; i > 0; i--) {
-        [arr[0], arr[i]] = [arr[i], arr[0]];
-        heapify(arr, i, 0);
-    }
-    return arr;
+  for (let i = n - 1; i > 0; i--) {
+    [arr[0], arr[i]] = [arr[i], arr[0]];
+    heapify(arr, i, 0);
+  }
+  return arr;
 }
 
 function heapify(arr, n, i) {
-    let largest = i;
-    let left = 2 * i + 1;
-    let right = 2 * i + 2;
+  let largest = i;
+  let left = 2 * i + 1;
+  let right = 2 * i + 2;
 
-    if (left < n && arr[left] > arr[largest]) {
-        largest = left;
-    }
+  if (left < n && arr[left] > arr[largest]) {
+    largest = left;
+  }
 
-    if (right < n && arr[right] > arr[largest]) {
-        largest = right;
-    }
+  if (right < n && arr[right] > arr[largest]) {
+    largest = right;
+  }
 
-    if (largest !== i) {
-        [arr[i], arr[largest]] = [arr[largest], arr[i]];
-        heapify(arr, n, largest);
-    }
+  if (largest !== i) {
+    [arr[i], arr[largest]] = [arr[largest], arr[i]];
+    heapify(arr, n, largest);
+  }
 }
 ```
 
@@ -1136,21 +1136,21 @@ def counting_sort(arr):
 
 ```javascript [Javascript]
 function countingSort(arr) {
-    let max = Math.max(...arr);
-    let count = new Array(max + 1).fill(0);
+  let max = Math.max(...arr);
+  let count = new Array(max + 1).fill(0);
 
-    for (let num of arr) {
-        count[num]++;
-    }
+  for (let num of arr) {
+    count[num]++;
+  }
 
-    let sorted = [];
-    for (let i = 0; i < count.length; i++) {
-        while (count[i] > 0) {
-            sorted.push(i);
-            count[i]--;
-        }
+  let sorted = [];
+  for (let i = 0; i < count.length; i++) {
+    while (count[i] > 0) {
+      sorted.push(i);
+      count[i]--;
     }
-    return sorted;
+  }
+  return sorted;
 }
 ```
 
@@ -1284,29 +1284,29 @@ def bucket_sort(arr):
 
 ```javascript [Javascript]
 function bucketSort(arr, bucketSize = 5) {
-    if (arr.length === 0) return arr;
+  if (arr.length === 0) return arr;
 
-    let min = Math.min(...arr);
-    let max = Math.max(...arr);
-    let bucketCount = Math.floor((max - min) / bucketSize) + 1;
-    let buckets = new Array(bucketCount);
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  let bucketCount = Math.floor((max - min) / bucketSize) + 1;
+  let buckets = new Array(bucketCount);
 
-    for (let i = 0; i < buckets.length; i++) {
-        buckets[i] = [];
+  for (let i = 0; i < buckets.length; i++) {
+    buckets[i] = [];
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    buckets[Math.floor((arr[i] - min) / bucketSize)].push(arr[i]);
+  }
+
+  arr.length = 0;
+  for (let i = 0; i < buckets.length; i++) {
+    buckets[i].sort((a, b) => a - b);
+    for (let j = 0; j < buckets[i].length; j++) {
+      arr.push(buckets[i][j]);
     }
-
-    for (let i = 0; i < arr.length; i++) {
-        buckets[Math.floor((arr[i] - min) / bucketSize)].push(arr[i]);
-    }
-
-    arr.length = 0;
-    for (let i = 0; i < buckets.length; i++) {
-        buckets[i].sort((a, b) => a - b);
-        for (let j = 0; j < buckets[i].length; j++) {
-            arr.push(buckets[i][j]);
-        }
-    }
-    return arr;
+  }
+  return arr;
 }
 ```
 
@@ -1496,37 +1496,37 @@ def radix_sort(arr):
 
 ```javascript [Javascript]
 function countingSortForRadix(arr, exp) {
-    let n = arr.length;
-    let output = new Array(n);
-    let count = new Array(10).fill(0);
+  let n = arr.length;
+  let output = new Array(n);
+  let count = new Array(10).fill(0);
 
-    for (let i = 0; i < n; i++) {
-        let index = Math.floor(arr[i] / exp) % 10;
-        count[index]++;
-    }
+  for (let i = 0; i < n; i++) {
+    let index = Math.floor(arr[i] / exp) % 10;
+    count[index]++;
+  }
 
-    for (let i = 1; i < 10; i++) {
-        count[i] += count[i - 1];
-    }
+  for (let i = 1; i < 10; i++) {
+    count[i] += count[i - 1];
+  }
 
-    for (let i = n - 1; i >= 0; i--) {
-        let index = Math.floor(arr[i] / exp) % 10;
-        output[count[index] - 1] = arr[i];
-        count[index]--;
-    }
+  for (let i = n - 1; i >= 0; i--) {
+    let index = Math.floor(arr[i] / exp) % 10;
+    output[count[index] - 1] = arr[i];
+    count[index]--;
+  }
 
-    for (let i = 0; i < n; i++) {
-        arr[i] = output[i];
-    }
+  for (let i = 0; i < n; i++) {
+    arr[i] = output[i];
+  }
 }
 
 function radixSort(arr) {
-    let max = Math.max(...arr);
+  let max = Math.max(...arr);
 
-    for (let exp = 1; Math.floor(max / exp) > 0; exp *= 10) {
-        countingSortForRadix(arr, exp);
-    }
-    return arr;
+  for (let exp = 1; Math.floor(max / exp) > 0; exp *= 10) {
+    countingSortForRadix(arr, exp);
+  }
+  return arr;
 }
 ```
 

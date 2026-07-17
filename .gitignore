@@ -140,5 +140,8 @@ vite.config.ts.timestamp-*
 # IDE
 .idea
 !.idea/icon.png
-.vscode
-.obsidian
+/.vscode
+/.obsidian
+
+# AI
+/.mimocode

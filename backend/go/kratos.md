@@ -154,10 +154,10 @@ func main() {
 
 ```yaml
 server:
-    http:
-        addr: ":8000"
-    grpc:
-        addr: ":9000"
+  http:
+    addr: ":8000"
+  grpc:
+    addr: ":9000"
 ```
 
 - **加载配置**

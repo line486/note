@@ -331,10 +331,10 @@ git checkout -b recovery-branch <hash>
 
 - **命令行**：`tig`（终端 UI）
 - **桌面端**：
-    - GitHub Desktop（简单易用）
-    - Sourcetree（功能全面）
-    - GitKraken（美观强大）
-    - VS Code 内置 Git 支持
+  - GitHub Desktop（简单易用）
+  - Sourcetree（功能全面）
+  - GitKraken（美观强大）
+  - VS Code 内置 Git 支持
 
 ## 十五、学习资源
 

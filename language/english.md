@@ -186,24 +186,24 @@ have 可以作为助动词，也可以是实义动词“有”
 ### 一、 五大基本句型
 
 1. **主语无需承受者（宾语）**
-    - 结构：主语 + 不及物动词
-    - 例：The rabbit slept. (兔子睡了)
+   - 结构：主语 + 不及物动词
+   - 例：The rabbit slept. (兔子睡了)
 
 2. **一个宾语，无补充信息**
-    - 结构：主语 + 谓语动词 + 宾语
-    - 例：The rabbit ate a carrot. (兔子吃了一根胡萝卜)
+   - 结构：主语 + 谓语动词 + 宾语
+   - 例：The rabbit ate a carrot. (兔子吃了一根胡萝卜)
 
 3. **两个宾语**
-    - 结构：主语 + 双及物动词 + 间接宾语 + 直接宾语
-    - 例：The rabbit gave them a carrot. (兔子给了他们一根胡萝卜)
+   - 结构：主语 + 双及物动词 + 间接宾语 + 直接宾语
+   - 例：The rabbit gave them a carrot. (兔子给了他们一根胡萝卜)
 
 4. **一个宾语 + 补充信息**
-    - 结构：主语 + 复杂及物动词 + 宾语 + 宾语补语
-    - 例：The rabbit considered the carrot tasty. (兔子认为这胡萝卜好吃)
+   - 结构：主语 + 复杂及物动词 + 宾语 + 宾语补语
+   - 例：The rabbit considered the carrot tasty. (兔子认为这胡萝卜好吃)
 
 5. **赋予信息**
-    - 结构：主语 + 系动词 + 主语补语/表语
-    - 例：The rabbit is smart. (兔子很聪明)
+   - 结构：主语 + 系动词 + 主语补语/表语
+   - 例：The rabbit is smart. (兔子很聪明)
 
 ### 二、 动词分类
 
@@ -250,11 +250,11 @@ look, feel, stay, become, seem, turn, appear, grow 等。
 #### （一） 基本助动词
 
 1. **be**（存在）：构成进行时。
-    - 例：The rabbit is eating a carrot.
+   - 例：The rabbit is eating a carrot.
 2. **do**（做）：构成疑问、否定或强调（还可作实义动词）。
-    - 例：The rabbit does like carrots. (构成强调)
+   - 例：The rabbit does like carrots. (构成强调)
 3. **have**（有）：构成完成时。
-    - 例：The rabbit has eaten a carrot.
+   - 例：The rabbit has eaten a carrot.
 
 #### （二） 情态助动词（情态动词）
 
@@ -282,7 +282,7 @@ look, feel, stay, become, seem, turn, appear, grow 等。
 - **表必需**：You must finish your work.
 - **表禁止**：You must not / mustn't smoke. (禁止吸烟。must not 不是"不必须"，而是"必须不！")
 - **表推测**：The light is on. The rabbit must be at home.
-    - **否定推测**：The light isn't on. The rabbit can't be at home. (否定推测用 can't)
+  - **否定推测**：The light isn't on. The rabbit can't be at home. (否定推测用 can't)
 
 ##### 4. will / would
 
@@ -312,13 +312,13 @@ look, feel, stay, become, seem, turn, appear, grow 等。
 
 - **实义动词**：需要
 - **情态动词**：有必要（否定时在 need 后加 not）
-    - 例：The rabbit need not wait.
+  - 例：The rabbit need not wait.
 
 ##### 9. dare
 
 - **实义动词**：敢，挑战，冒险
 - **情态动词**：敢
-    - 例：The rabbit dare not tell the truth to the wolf.
+  - 例：The rabbit dare not tell the truth to the wolf.
 
 ##### 10. used to
 
@@ -329,23 +329,23 @@ look, feel, stay, become, seem, turn, appear, grow 等。
 ### 五、 半助动词
 
 1. **be able to**
-    - 可以表达将来的能力：I'll be able to reach school on time if I leave right now.
-    - was/were able to：成功做成某事。
+   - 可以表达将来的能力：I'll be able to reach school on time if I leave right now.
+   - was/were able to：成功做成某事。
 
 2. **be going to**
-    - 有更强的主观能动性，计划做某事。
-    - 例：I'm going to eat dinner at 6 PM today.
+   - 有更强的主观能动性，计划做某事。
+   - 例：I'm going to eat dinner at 6 PM today.
 
 3. **be about to**
-    - 马上就要做。
+   - 马上就要做。
 
 4. **be to**
-    - 被命令做某事：You are to finish homework first.
-    - 命中注定：I think they are to fall in love with each other.
+   - 被命令做某事：You are to finish homework first.
+   - 命中注定：I think they are to fall in love with each other.
 
 5. **had better** (缩写 'd better)
-    - 最好做，有忠告、警告之意。
-    - 例：You had better follow my order.
+   - 最好做，有忠告、警告之意。
+   - 例：You had better follow my order.
 
 ### 六、 使役动词
 
@@ -444,10 +444,10 @@ I'm a talking rabbit. / The rabbit likes minced carrots.
 #### 高级不定式（把不定式和状态相结合）
 
 - to be eating a carrot：to + 进行状态
-    - The rabbit seemed to be eating a carrot.
+  - The rabbit seemed to be eating a carrot.
 - to have eaten a carrot：to + 完成状态
 - to have been eating a carrot：to + 完成进行状态
-    - 这兔子之前似乎在吃一根胡萝卜（的过程中）
+  - 这兔子之前似乎在吃一根胡萝卜（的过程中）
 
 ### 三、 动名词
 

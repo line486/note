@@ -6,8 +6,8 @@
 
 - **Native ESM 驱动**：基于浏览器原生模块系统构建，实现按需编译
 - **双引擎架构**：
-    - **Dev Server**：基于 [esbuild](https://esbuild.github.io/) 的毫秒级冷启动
-    - **生产构建**：集成 [Rollup](https://rollupjs.org/) 的稳定打包能力
+  - **Dev Server**：基于 [esbuild](https://esbuild.github.io/) 的毫秒级冷启动
+  - **生产构建**：集成 [Rollup](https://rollupjs.org/) 的稳定打包能力
 - **HMR 优化**：文件级更新速度比 Webpack 快 5-10 倍
 
 ### 1.2 性能对比
@@ -28,22 +28,22 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-    plugins: [react()],
-    resolve: {
-        alias: {
-            "@": "/src",
-            "#": "/types",
-        },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": "/src",
+      "#": "/types",
     },
-    server: {
-        proxy: {
-            "/api": {
-                target: "https://api.example.com",
-                changeOrigin: true,
-                rewrite: (path) => path.replace(/^\/api/, ""),
-            },
-        },
+  },
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://api.example.com",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
     },
+  },
 });
 ```
 
@@ -79,12 +79,12 @@ import(/* webpackPreload: true */ "./critical-module.js");
 
 ```css [style.module.css]
 .container {
-    --primary-color: #1890ff;
+  --primary-color: #1890ff;
 }
 
 .title {
-    color: var(--primary-color);
-    composes: baseFont from "./base.css";
+  color: var(--primary-color);
+  composes: baseFont from "./base.css";
 }
 ```
 
@@ -99,10 +99,13 @@ document.getElementById("app").className = styles.container;
 
 ```typescript
 interface VitePlugin {
-    name: string;
-    config?: (config: UserConfig) => UserConfig | null | void;
-    transform?: (code: string, id: string) => string | { code: string; map?: SourceMap };
-    configureServer?: (server: ViteDevServer) => void;
+  name: string;
+  config?: (config: UserConfig) => UserConfig | null | void;
+  transform?: (
+    code: string,
+    id: string,
+  ) => string | { code: string; map?: SourceMap };
+  configureServer?: (server: ViteDevServer) => void;
 }
 ```
 
@@ -113,14 +116,14 @@ import { Plugin } from "vite";
 import marked from "marked";
 
 export function markdownPlugin(): Plugin {
-    return {
-        name: "vite-md-plugin",
-        transform(code, id) {
-            if (!id.endsWith(".md")) return;
-            const html = marked(code);
-            return `export default ${JSON.stringify(html)}`;
-        },
-    };
+  return {
+    name: "vite-md-plugin",
+    transform(code, id) {
+      if (!id.endsWith(".md")) return;
+      const html = marked(code);
+      return `export default ${JSON.stringify(html)}`;
+    },
+  };
 }
 ```
 
@@ -149,19 +152,20 @@ plugins: [
 import { splitVendorChunkPlugin } from "vite";
 
 export default defineConfig({
-    plugins: [splitVendorChunkPlugin()],
-    build: {
-        rollupOptions: {
-            external: ["react", "react-dom"],
-            output: {
-                paths: {
-                    react: "https://cdn.example.com/react@18.2.0/umd/react.production.min.js",
-                    "react-dom":
-                        "https://cdn.example.com/react-dom@18.2.0/umd/react-dom.production.min.js",
-                },
-            },
+  plugins: [splitVendorChunkPlugin()],
+  build: {
+    rollupOptions: {
+      external: ["react", "react-dom"],
+      output: {
+        paths: {
+          react:
+            "https://cdn.example.com/react@18.2.0/umd/react.production.min.js",
+          "react-dom":
+            "https://cdn.example.com/react-dom@18.2.0/umd/react-dom.production.min.js",
         },
+      },
     },
+  },
 });
 ```
 
@@ -182,11 +186,11 @@ export default defineConfig({
 
 ```json [package.json]
 {
-    "workspaces": ["packages/*"],
-    "scripts": {
-        "dev:core": "cd packages/core && vite",
-        "build:components": "cd packages/components && vite build"
-    }
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev:core": "cd packages/core && vite",
+    "build:components": "cd packages/components && vite build"
+  }
 }
 ```
 

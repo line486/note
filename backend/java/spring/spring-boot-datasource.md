@@ -28,15 +28,15 @@
 
 ```yaml
 spring:
-    datasource:
-        url: jdbc:mysql://localhost:3306/db_account
-        username: root
-        password: 123456
-        driver-class-name: com.mysql.jdbc.Driver
-    jdbc:
-        template:
-            query-timeout: 3
-            # 3 秒没结果，就超时
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_account
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jdbc:
+    template:
+      query-timeout: 3
+      # 3 秒没结果，就超时
 ```
 
 ### JDBC 测试
@@ -77,10 +77,10 @@ class MysqlTest {
 
 ```yaml
 datasource:
-    url: jdbc:mysql://localhost:3306/db_account
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/db_account
+  username: root
+  password: 123456
+  driver-class-name: com.mysql.cj.jdbc.Driver
 ```
 
 ```java
@@ -117,36 +117,36 @@ public class DruidConfig {
 
 ```yaml
 spring:
-    datasource:
-        url: jdbc:mysql://localhost:3306/db_account
-        username: root
-        password: 123456
-        driver-class-name: com.mysql.cj.jdbc.Driver
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_account
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
-        druid:
-            aop-patterns: com.atguigu.admin.* #监控SpringBean
-            filters: stat,wall # 底层开启功能，stat（sql监控），wall（防火墙）
+    druid:
+      aop-patterns: com.atguigu.admin.* #监控SpringBean
+      filters: stat,wall # 底层开启功能，stat（sql监控），wall（防火墙）
 
-            stat-view-servlet: # 配置监控页功能
-                enabled: true
-                login-username: admin
-                login-password: admin
-                resetEnable: false
+      stat-view-servlet: # 配置监控页功能
+        enabled: true
+        login-username: admin
+        login-password: admin
+        resetEnable: false
 
-            web-stat-filter: # 监控web
-                enabled: true
-                urlPattern: /*
-                exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+      web-stat-filter: # 监控web
+        enabled: true
+        urlPattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
 
-            filter:
-                stat: # 对上面filters里面的stat的详细配置
-                    slow-sql-millis: 1000
-                    logSlowSql: true
-                    enabled: true
-                wall:
-                    enabled: true
-                    config:
-                        drop-table-allow: false
+      filter:
+        stat: # 对上面filters里面的stat的详细配置
+          slow-sql-millis: 1000
+          logSlowSql: true
+          enabled: true
+        wall:
+          enabled: true
+          config:
+            drop-table-allow: false
 ```
 
 ## MyBatis
@@ -169,11 +169,11 @@ spring:
 
 ```yaml
 spring:
-    datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/db_account
-        username: root
-        password: 123456
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_account
+    username: root
+    password: 123456
 ```
 
 ### 使用 MyBatis 注解
@@ -274,11 +274,11 @@ public class UserServiceImpl implements UserService {
 
 ```yaml
 spring:
-    datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/db_account
-        username: root
-        password: 123456
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_account
+    username: root
+    password: 123456
 ```
 
 ### MyBatis Plus 示例
@@ -331,29 +331,29 @@ public Map<String, Object> getAllEmailAccounts(Integer pageNum, Integer pageSize
 
 - 如果数据库的表名与类名不匹配，则可以使用`@TableName`注解指定表名。
 
-    ```java
-    @TableName("t_user")
-    ```
+  ```java
+  @TableName("t_user")
+  ```
 
 - 如果数据库的字段名与类中的属性名不匹配，则可以使用`@TableField`注解指定字段名。
 
-    ```java
-    @TableField("user_name")
-    ```
+  ```java
+  @TableField("user_name")
+  ```
 
-    也可以开启⾃动驼峰命名规则（camel case）映射，从经典数据库列名 A_COLUMN（下划线命名） 到 经典 Java 属性名 aColumn（驼峰命名） 的类似映射。
+  也可以开启⾃动驼峰命名规则（camel case）映射，从经典数据库列名 A_COLUMN（下划线命名） 到 经典 Java 属性名 aColumn（驼峰命名） 的类似映射。
 
-    ```yaml
-    mybatis-plus:
-        configuration:
-            map-underscore-to-camel-case: true
-    ```
+  ```yaml
+  mybatis-plus:
+    configuration:
+      map-underscore-to-camel-case: true
+  ```
 
 - 使用 `@TableId` 注解指定主键字段。
 
-    ```java
-    @TableId("id")
-    ```
+  ```java
+  @TableId("id")
+  ```
 
 - `@TableField(fill = FieldFill.INSERT)` 表示在插入时填充字段。
 
@@ -365,20 +365,20 @@ public Map<String, Object> getAllEmailAccounts(Integer pageNum, Integer pageSize
 
 - 开启数据库的 `ID` 自增策略：
 
-    ```yaml
-    mybatis-plus:
-        global-config:
-            db-config:
-                id-type: auto
-    ```
+  ```yaml
+  mybatis-plus:
+    global-config:
+      db-config:
+        id-type: auto
+  ```
 
 - 开启 `log4j` 日志输出：
 
-    ```yaml
-    mybatis-plus:
-        configuration:
-            log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
-    ```
+  ```yaml
+  mybatis-plus:
+    configuration:
+      log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
+  ```
 
 ## Redis
 
@@ -395,21 +395,21 @@ public Map<String, Object> getAllEmailAccounts(Integer pageNum, Integer pageSize
 
 ```yaml
 spring:
-    redis:
-        host: 127.0.0.1
-        port: 6379
-        # password: 123456 # 有密码时配置
-        # database: 0
-        lettuce:
-            pool:
-                # 最大连接数
-                max-active: 8
-                # 当池耗尽时，连接分配在引发异常之前应阻塞的最长时间。
-                max-wait: -1
-                # 池中“空闲”连接的最大数量
-                max-idle: 8
-                # 池中要维护的最小空闲连接数的目标
-                min-idle: 0
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    # password: 123456 # 有密码时配置
+    # database: 0
+    lettuce:
+      pool:
+        # 最大连接数
+        max-active: 8
+        # 当池耗尽时，连接分配在引发异常之前应阻塞的最长时间。
+        max-wait: -1
+        # 池中“空闲”连接的最大数量
+        max-idle: 8
+        # 池中要维护的最小空闲连接数的目标
+        min-idle: 0
 ```
 
 > [!TIP]
@@ -452,12 +452,12 @@ void testRedis(){
 
 ```yaml
 spring:
-    redis:
-        host: 127.0.0.1
-        port: 6379
-        # password: 123456 # 有密码时配置
-        client-type: jedis
-        jedis:
-            pool:
-                max-active: 10
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    # password: 123456 # 有密码时配置
+    client-type: jedis
+    jedis:
+      pool:
+        max-active: 10
 ```

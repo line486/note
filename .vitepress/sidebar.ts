@@ -38,7 +38,10 @@ export default [
         text: "机器学习",
         collapsed: true,
         items: [
-          { text: "了解一下", link: "/program/machine-learning/introduction.md" },
+          {
+            text: "了解一下",
+            link: "/program/machine-learning/introduction.md",
+          },
           {
             text: "快速入门",
             collapsed: true,
@@ -76,7 +79,10 @@ export default [
         items: [
           { text: "Spring", link: "/backend/java/spring/spring.md" },
           { text: "SpringBoot", link: "/backend/java/spring/spring-boot.md" },
-          { text: "SpringBoot 数据访问", link: "/backend/java/spring/spring-boot-datasource.md" },
+          {
+            text: "SpringBoot 数据访问",
+            link: "/backend/java/spring/spring-boot-datasource.md",
+          },
         ],
       },
       { text: "Flask 框架", link: "/backend/python/flask.md" },
@@ -127,6 +133,7 @@ export default [
       { text: "Nginx", link: "/server/nginx.md" },
       { text: "Docker", link: "/server/docker.md" },
       { text: "ACME 申请证书", link: "/server/acme.md" },
+      { text: "Headscale", link: "/server/headscale.md" },
       { text: "GitHub Actions", link: "/server/github-actions.md" },
       { text: "GitLab CI/CD", link: "/server/gitLab-cicd.md" },
     ],

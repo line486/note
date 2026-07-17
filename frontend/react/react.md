@@ -21,12 +21,12 @@ npx create-react-app react-basic
 const message = "this is message";
 
 function App() {
-    return (
-        <div>
-            <h1>this is title</h1>
-            {message}
-        </div>
-    );
+  return (
+    <div>
+      <h1>this is title</h1>
+      {message}
+    </div>
+  );
 }
 ```
 
@@ -50,31 +50,31 @@ function App() {
 3. 函数调用和方法调用
 4. 使用 `JavaScript` 对象
 
-    > [!WARNING]
-    >
-    > 注意：`if` 语句、`switch` 语句、变量声明不属于表达式，不能出现在 `{}` 中
+   > [!WARNING]
+   >
+   > 注意：`if` 语句、`switch` 语句、变量声明不属于表达式，不能出现在 `{}` 中
 
 ```jsx
 const message = "this is message";
 
 function getAge() {
-    return 18;
+  return 18;
 }
 
 function App() {
-    return (
-        <div>
-            <h1>this is title</h1>
-            {/* 字符串识别 */}
-            {"this is str"}
-            {/* 变量识别 */}
-            {message}
-            {/* 变量识别 */}
-            {message}
-            {/* 函数调用 渲染为函数的返回值 */}
-            {getAge()}
-        </div>
-    );
+  return (
+    <div>
+      <h1>this is title</h1>
+      {/* 字符串识别 */}
+      {"this is str"}
+      {/* 变量识别 */}
+      {message}
+      {/* 变量识别 */}
+      {message}
+      {/* 函数调用 渲染为函数的返回值 */}
+      {getAge()}
+    </div>
+  );
 }
 ```
 
@@ -86,19 +86,19 @@ function App() {
 
 ```jsx
 const list = [
-    { id: 1001, name: "Vue" },
-    { id: 1002, name: "React" },
-    { id: 1003, name: "Angular" },
+  { id: 1001, name: "Vue" },
+  { id: 1002, name: "React" },
+  { id: 1003, name: "Angular" },
 ];
 
 function App() {
-    return (
-        <ul>
-            {list.map((item) => (
-                <li key={item.id}>{item}</li>
-            ))}
-        </ul>
-    );
+  return (
+    <ul>
+      {list.map((item) => (
+        <li key={item.id}>{item}</li>
+      ))}
+    </ul>
+  );
 }
 ```
 
@@ -113,12 +113,12 @@ const flag = true;
 const loading = false;
 
 function App() {
-    return (
-        <>
-            {flag && <span>this is span</span>}
-            {loading ? <span>loading...</span> : <span>this is span</span>}
-        </>
-    );
+  return (
+    <>
+      {flag && <span>this is span</span>}
+      {loading ? <span>loading...</span> : <span>this is span</span>}
+    </>
+  );
 }
 ```
 
@@ -157,10 +157,10 @@ function App(){
 
 ```jsx
 function App() {
-    const clickHandler = () => {
-        console.log("button按钮点击了");
-    };
-    return <button onClick={clickHandler}>click me</button>;
+  const clickHandler = () => {
+    console.log("button按钮点击了");
+  };
+  return <button onClick={clickHandler}>click me</button>;
 }
 ```
 
@@ -170,10 +170,10 @@ function App() {
 
 ```jsx
 function App() {
-    const clickHandler = (e) => {
-        console.log("button按钮点击了", e);
-    };
-    return <button onClick={clickHandler}>click me</button>;
+  const clickHandler = (e) => {
+    console.log("button按钮点击了", e);
+  };
+  return <button onClick={clickHandler}>click me</button>;
 }
 ```
 
@@ -183,10 +183,10 @@ function App() {
 
 ```jsx
 function App() {
-    const clickHandler = (name) => {
-        console.log("button按钮点击了", name);
-    };
-    return <button onClick={() => clickHandler("jack")}>click me</button>;
+  const clickHandler = (name) => {
+    console.log("button按钮点击了", name);
+  };
+  return <button onClick={() => clickHandler("jack")}>click me</button>;
 }
 ```
 
@@ -200,10 +200,10 @@ function App() {
 
 ```jsx
 function App() {
-    const clickHandler = (name, e) => {
-        console.log("button按钮点击了", name, e);
-    };
-    return <button onClick={(e) => clickHandler("jack", e)}>click me</button>;
+  const clickHandler = (name, e) => {
+    console.log("button按钮点击了", name, e);
+  };
+  return <button onClick={(e) => clickHandler("jack", e)}>click me</button>;
 }
 ```
 
@@ -221,19 +221,19 @@ function App() {
 ```jsx
 // 1. 定义组件
 function Button() {
-    return <button>click me</button>;
+  return <button>click me</button>;
 }
 
 // 2. 使用组件
 function App() {
-    return (
-        <div>
-            {/* 自闭和 */}
-            <Button />
-            {/* 成对标签 */}
-            <Button></Button>
-        </div>
-    );
+  return (
+    <div>
+      {/* 自闭和 */}
+      <Button />
+      {/* 成对标签 */}
+      <Button></Button>
+    </div>
+  );
 }
 ```
 
@@ -248,12 +248,12 @@ function App() {
 
 ```jsx
 function App() {
-    const [count, setCount] = React.useState(0);
-    return (
-        <div>
-            <button onClick={() => setCount(count + 1)}>{count}</button>
-        </div>
-    );
+  const [count, setCount] = React.useState(0);
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>{count}</button>
+    </div>
+  );
 }
 ```
 
@@ -279,7 +279,7 @@ React组件基础的样式控制有俩种方式，行内样式和 `class` 类名
 
 ```css
 .foo {
-    color: red;
+  color: red;
 }
 ```
 
@@ -287,11 +287,11 @@ React组件基础的样式控制有俩种方式，行内样式和 `class` 类名
 import "./index.css";
 
 function App() {
-    return (
-        <div>
-            <span className="foo">this is span</span>
-        </div>
-    );
+  return (
+    <div>
+      <span className="foo">this is span</span>
+    </div>
+  );
 }
 ```
 
@@ -305,8 +305,14 @@ function App() {
 
 ```jsx
 function App() {
-    const [value, setValue] = useState("");
-    return <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />;
+  const [value, setValue] = useState("");
+  return (
+    <input
+      type="text"
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  );
 }
 ```
 
@@ -316,13 +322,13 @@ function App() {
 
 ```jsx
 function App() {
-    const inputRef = useRef(null);
+  const inputRef = useRef(null);
 
-    const onChange = () => {
-        console.log(inputRef.current.value);
-    };
+  const onChange = () => {
+    console.log(inputRef.current.value);
+  };
 
-    return <input type="text" ref={inputRef} onChange={onChange} />;
+  return <input type="text" ref={inputRef} onChange={onChange} />;
 }
 ```
 
@@ -349,16 +355,16 @@ function App() {
 
 ```jsx
 function Son(props) {
-    return <div>{props.name}</div>;
+  return <div>{props.name}</div>;
 }
 
 function App() {
-    const name = "this is app name";
-    return (
-        <div>
-            <Son name={name} />
-        </div>
-    );
+  const name = "this is app name";
+  return (
+    <div>
+      <Son name={name} />
+    </div>
+  );
 }
 ```
 
@@ -383,24 +389,24 @@ function App() {
 
 ```tsx
 function Son({ onGetMsg }) {
-    const sonMsg = "this is son msg";
-    return (
-        <div>
-            {/* 在子组件中执行父组件传递过来的函数 */}
-            <button onClick={() => onGetMsg(sonMsg)}>send</button>
-        </div>
-    );
+  const sonMsg = "this is son msg";
+  return (
+    <div>
+      {/* 在子组件中执行父组件传递过来的函数 */}
+      <button onClick={() => onGetMsg(sonMsg)}>send</button>
+    </div>
+  );
 }
 
 function App() {
-    const getMsg = (msg) => console.log(msg);
+  const getMsg = (msg) => console.log(msg);
 
-    return (
-        <div>
-            {/* 传递父组件中的函数到子组件 */}
-            <Son onGetMsg={getMsg} />
-        </div>
-    );
+  return (
+    <div>
+      {/* 传递父组件中的函数到子组件 */}
+      <Son onGetMsg={getMsg} />
+    </div>
+  );
 }
 ```
 
@@ -420,37 +426,37 @@ function App() {
 import { useState } from "react";
 
 function A({ onGetAName }) {
-    // Son组件中的数据
-    const name = "this is A name";
-    return (
-        <div>
-            this is A compnent,
-            <button onClick={() => onGetAName(name)}>send</button>
-        </div>
-    );
+  // Son组件中的数据
+  const name = "this is A name";
+  return (
+    <div>
+      this is A compnent,
+      <button onClick={() => onGetAName(name)}>send</button>
+    </div>
+  );
 }
 
 function B({ name }) {
-    return (
-        <div>
-            this is B compnent,
-            {name}
-        </div>
-    );
+  return (
+    <div>
+      this is B compnent,
+      {name}
+    </div>
+  );
 }
 
 function App() {
-    const [name, setName] = useState("");
-    const getAName = (name) => {
-        setName(name);
-    };
-    return (
-        <div>
-            this is App
-            <A onGetAName={getAName} />
-            <B name={name} />
-        </div>
-    );
+  const [name, setName] = useState("");
+  const getAName = (name) => {
+    setName(name);
+  };
+  return (
+    <div>
+      this is App
+      <A onGetAName={getAName} />
+      <B name={name} />
+    </div>
+  );
 }
 
 export default App;
@@ -475,31 +481,31 @@ import { createContext, useContext } from "react";
 const MsgContext = createContext();
 
 function A() {
-    return (
-        <div>
-            this is A component
-            <B />
-        </div>
-    );
+  return (
+    <div>
+      this is A component
+      <B />
+    </div>
+  );
 }
 
 function B() {
-    // 3. 在底层组件 通过useContext钩子函数使用数据
-    const msg = useContext(MsgContext);
-    return <div>this is B compnent,{msg}</div>;
+  // 3. 在底层组件 通过useContext钩子函数使用数据
+  const msg = useContext(MsgContext);
+  return <div>this is B compnent,{msg}</div>;
 }
 
 function App() {
-    const msg = "this is app msg";
-    return (
-        <div>
-            {/* 2. 在顶层组件 通过Provider组件提供数据 */}
-            <MsgContext.Provider value={msg}>
-                this is App
-                <A />
-            </MsgContext.Provider>
-        </div>
-    );
+  const msg = "this is app msg";
+  return (
+    <div>
+      {/* 2. 在顶层组件 通过Provider组件提供数据 */}
+      <MsgContext.Provider value={msg}>
+        this is App
+        <A />
+      </MsgContext.Provider>
+    </div>
+  );
 }
 
 export default App;
@@ -550,29 +556,29 @@ export default App;
 import { useEffect, useState } from "react";
 
 function Son() {
-    // 1. 渲染时开启一个定时器
-    useEffect(() => {
-        const timer = setInterval(() => {
-            console.log("定时器执行中...");
-        }, 1000);
+  // 1. 渲染时开启一个定时器
+  useEffect(() => {
+    const timer = setInterval(() => {
+      console.log("定时器执行中...");
+    }, 1000);
 
-        return () => {
-            // 清除副作用(组件卸载时)
-            clearInterval(timer);
-        };
-    }, []);
-    return <div>this is son</div>;
+    return () => {
+      // 清除副作用(组件卸载时)
+      clearInterval(timer);
+    };
+  }, []);
+  return <div>this is son</div>;
 }
 
 function App() {
-    // 通过条件渲染模拟组件卸载
-    const [show, setShow] = useState(true);
-    return (
-        <div>
-            {show && <Son />}
-            <button onClick={() => setShow(false)}>卸载Son组件</button>
-        </div>
-    );
+  // 通过条件渲染模拟组件卸载
+  const [show, setShow] = useState(true);
+  return (
+    <div>
+      {show && <Son />}
+      <button onClick={() => setShow(false)}>卸载Son组件</button>
+    </div>
+  );
 }
 
 export default App;
@@ -594,16 +600,16 @@ export default App;
 import { useState } from "react";
 
 function useToggle() {
-    // 可复用的逻辑代码
-    const [value, setValue] = useState(true);
+  // 可复用的逻辑代码
+  const [value, setValue] = useState(true);
 
-    const toggle = () => setValue(!value);
+  const toggle = () => setValue(!value);
 
-    // 哪些状态和回调函数需要在其他组件中使用 return
-    return {
-        value,
-        toggle,
-    };
+  // 哪些状态和回调函数需要在其他组件中使用 return
+  return {
+    value,
+    toggle,
+  };
 }
 
 // 封装自定义hook通用思路
@@ -614,13 +620,13 @@ function useToggle() {
 // 4. 在哪个组件中要用到这个逻辑，就执行这个函数，解构出来状态和回调进行使用
 
 function App() {
-    const { value, toggle } = useToggle();
-    return (
-        <div>
-            {value && <div>this is div</div>}
-            <button onClick={toggle}>toggle</button>
-        </div>
-    );
+  const { value, toggle } = useToggle();
+  return (
+    <div>
+      {value && <div>this is div</div>}
+      <button onClick={toggle}>toggle</button>
+    </div>
+  );
 }
 
 export default App;

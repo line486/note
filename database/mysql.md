@@ -4,27 +4,27 @@
 
 1. 一行SQL语句
 
-    ```sql
-    -- 一行 SQL 语句
-    UPDATE user SET username='robot', password='robot' WHERE username = 'root';
-    ```
+   ```sql
+   -- 一行 SQL 语句
+   UPDATE user SET username='robot', password='robot' WHERE username = 'root';
+   ```
 
 2. 多行SQL语句
 
-    ```sql
-    -- 多行 SQL 语句
-    UPDATE user
-    SET username='robot', password='robot'
-    WHERE username = 'root';
-    ```
+   ```sql
+   -- 多行 SQL 语句
+   UPDATE user
+   SET username='robot', password='robot'
+   WHERE username = 'root';
+   ```
 
 3. 三种注释
 
-    ```sql
-    ## 注释1
-    -- 注释2
-    /* 注释3 */
-    ```
+   ```sql
+   ## 注释1
+   -- 注释2
+   /* 注释3 */
+   ```
 
 4. AS 后是”别名“
 
@@ -38,30 +38,30 @@
 
 1. 插入完整的一行
 
-    ```sql
-    INSERT INTO 表名 VALUES (值, 值, ..., 值);
-    ```
+   ```sql
+   INSERT INTO 表名 VALUES (值, 值, ..., 值);
+   ```
 
 2. 插入行的一部分
 
-    ```sql
-    INSERT INTO 表名(字段, 字段, ..., 字段) VALUES (值, 值, ..., 值);
-    ```
+   ```sql
+   INSERT INTO 表名(字段, 字段, ..., 字段) VALUES (值, 值, ..., 值);
+   ```
 
 3. 嵌套插入
 
-    ```sql
-    INSERT INTO 表1(字段1) SELECT n字段2 FROM 表2;
-    ```
+   ```sql
+   INSERT INTO 表1(字段1) SELECT n字段2 FROM 表2;
+   ```
 
 ### 2. 更新数据
 
 - UPDATE 语句用于更新表中的记录。
 
-    ```sql
-    UPDATE 表名 SET 字段 = 值, ... WHERE 字段 = 值, ...;
-    -- WHERE 后面是条件
-    ```
+  ```sql
+  UPDATE 表名 SET 字段 = 值, ... WHERE 字段 = 值, ...;
+  -- WHERE 后面是条件
+  ```
 
 ### 3. 删除数据（清空表）
 
@@ -70,15 +70,15 @@
 
 1. 删除指定数据
 
-    ```sql
-    DELETE FROM 表名 WHERE 字段 = 值;
-    ```
+   ```sql
+   DELETE FROM 表名 WHERE 字段 = 值;
+   ```
 
 2. 清空表中数据
 
-    ```sql
-    TRUNCATE TABLE 表名;
-    ```
+   ```sql
+   TRUNCATE TABLE 表名;
+   ```
 
 ### 4. 查找数据
 
@@ -90,35 +90,35 @@
 
 1. 查找全部数据
 
-    ```sql
-    SELECT * FROM 表名;
-    ```
+   ```sql
+   SELECT * FROM 表名;
+   ```
 
 2. 查找部分数据
 
-    ```sql
-    SELECT 字段, ... FROM 表名;
-    ```
+   ```sql
+   SELECT 字段, ... FROM 表名;
+   ```
 
 3. 查询不同的值
 
-    ```sql
-    SELECT DISTINCT 字段 FROM 表名;
-    ```
+   ```sql
+   SELECT DISTINCT 字段 FROM 表名;
+   ```
 
 4. 限制查询结果
 
-    ```sql
-    -- 返回前 5 行
-    SELECT * FROM 表名 LIMIT 5;
-    SELECT * FROM 表名 LIMIT 0, 5;
-    -- 返回第 3 ~ 5 行
-    SELECT * FROM 表名 LIMIT 2, 3;
-    --查询前2种
-    SELECT Top 2  * from 表名;
-    --查询前百分之五
-    SELECT Top 5 percent  * from 表名;
-    ```
+   ```sql
+   -- 返回前 5 行
+   SELECT * FROM 表名 LIMIT 5;
+   SELECT * FROM 表名 LIMIT 0, 5;
+   -- 返回第 3 ~ 5 行
+   SELECT * FROM 表名 LIMIT 2, 3;
+   --查询前2种
+   SELECT Top 2  * from 表名;
+   --查询前百分之五
+   SELECT Top 5 percent  * from 表名;
+   ```
 
 ## 二、 子查询（嵌套）
 
@@ -142,15 +142,15 @@ WHERE 字段 = 值));
 - WHERE 后跟一个返回 true 或 false 的条件。
 - WHERE 可以与 SELECT，UPDATE 和 DELETE 一起使用。
 - 可以在 WHERE 子句中使用的操作符：
-    - = : 等于
-    - <> : 不等于。注释：在 SQL 的一些版本中，该操作符可被写成 !=
-    - '>' : 大于
-    - < : 小于
-    - '>=' : 大于等于
-    - <= : 小于等于
-    - BETWEEN : 在某个范围内
-    - LIKE : 搜索某种模式
-    - IN : 指定针对某个列的多个可能值
+  - = : 等于
+  - <> : 不等于。注释：在 SQL 的一些版本中，该操作符可被写成 !=
+  - '>' : 大于
+  - < : 小于
+  - '>=' : 大于等于
+  - <= : 小于等于
+  - BETWEEN : 在某个范围内
+  - LIKE : 搜索某种模式
+  - IN : 指定针对某个列的多个可能值
 
 ### 3. IN 和 BETWEEN
 
@@ -159,15 +159,15 @@ WHERE 字段 = 值));
 
 1. IN
 
-    ```sql
-    SELECT * FROM 表名 WHERE 字段 IN (值, ... );
-    ```
+   ```sql
+   SELECT * FROM 表名 WHERE 字段 IN (值, ... );
+   ```
 
 2. BETWEEN
 
-    ```sql
-    SELECT * FROM 表名 WHERE 字段 BETWEEN 值 AND 值;
-    ```
+   ```sql
+   SELECT * FROM 表名 WHERE 字段 BETWEEN 值 AND 值;
+   ```
 
 ### 4. AND, OR, NOT
 
@@ -179,21 +179,21 @@ WHERE 字段 = 值));
 
 1. AND
 
-    ```sql
-    SELECT 字段, ... FROM 表名 WHERE 字段 = 值 AND 字段 <= 值;
-    ```
+   ```sql
+   SELECT 字段, ... FROM 表名 WHERE 字段 = 值 AND 字段 <= 值;
+   ```
 
 2. OR
 
-    ```sql
-    SELECT 字段, ... FROM 表名 WHERE 字段 = 值 OR 字段 = 值;
-    ```
+   ```sql
+   SELECT 字段, ... FROM 表名 WHERE 字段 = 值 OR 字段 = 值;
+   ```
 
 3. NOT
 
-    ```sql
-    SELECT 字段, ... FROM 表名 WHERE 字段 NOT BETWEEN 值 AND 值;
-    ```
+   ```sql
+   SELECT 字段, ... FROM 表名 WHERE 字段 NOT BETWEEN 值 AND 值;
+   ```
 
 ### 5. Like
 
@@ -206,17 +206,17 @@ WHERE 字段 = 值));
 
 1. % 示例
 
-    ```sql
-    SELECT 字段, ... FROM 表名
-    WHERE 字段 LIKE '%值%';
-    ```
+   ```sql
+   SELECT 字段, ... FROM 表名
+   WHERE 字段 LIKE '%值%';
+   ```
 
 2. \_ 示例
 
-    ```sql
-    SELECT 字段 FROM 表名
-    WHERE 字段 LIKE '_值';
-    ```
+   ```sql
+   SELECT 字段 FROM 表名
+   WHERE 字段 LIKE '_值';
+   ```
 
 ## 四、 连接和组合
 
@@ -238,63 +238,63 @@ WHERE 字段 = 值));
 
 1. 内连接（INNER JOIN）
 
-    ```sql
-    SELECT 字段, ... FROM vendors
-    INNER JOIN products ON vendors.vend_id = products.vend_id;
-    ```
+   ```sql
+   SELECT 字段, ... FROM vendors
+   INNER JOIN products ON vendors.vend_id = products.vend_id;
+   ```
 
 2. 自连接
 
-    ```sql
-    SELECT 字段, ... FROM customers c1, customers c2
-    WHERE c1.cust_name = c2.cust_name AND c2.cust_contact = 'Jim Jones';
-    ```
+   ```sql
+   SELECT 字段, ... FROM customers c1, customers c2
+   WHERE c1.cust_name = c2.cust_name AND c2.cust_contact = 'Jim Jones';
+   ```
 
 3. 自然连接（NATURAL JOIN）
 
-    ```sql
-    SELECT 字段, ... FROM Products
-    NATURAL JOIN Customers;
-    ```
+   ```sql
+   SELECT 字段, ... FROM Products
+   NATURAL JOIN Customers;
+   ```
 
 4. 左连接（LEFT JOIN）
 
-    ```sql
-    SELECT 字段, ... FROM customers
-    LEFT JOIN orders ON customers.cust_id = orders.cust_id;
-    ```
+   ```sql
+   SELECT 字段, ... FROM customers
+   LEFT JOIN orders ON customers.cust_id = orders.cust_id;
+   ```
 
 5. 右连接（RIGHT JOIN）
 
-    ```sql
-    SELECT 字段, ... FROM customers
-    RIGHT JOIN orders ON customers.cust_id = orders.cust_id;
-    ```
+   ```sql
+   SELECT 字段, ... FROM customers
+   RIGHT JOIN orders ON customers.cust_id = orders.cust_id;
+   ```
 
 ### 2. 组合（UNION）
 
 - UNION 运算符将两个或更多查询的结果组合起来，并生成一个结果集，其中包含来自 UNION 中参与查询的提取行。
 - UNION 基本规则：
-    - 所有查询的列数和列顺序必须相同。
-    - 每个查询中涉及表的列的数据类型必须相同或兼容。
-        - 通常返回的列名取自第一个查询。
+  - 所有查询的列数和列顺序必须相同。
+  - 每个查询中涉及表的列的数据类型必须相同或兼容。
+    - 通常返回的列名取自第一个查询。
 - 默认会去除相同行，如果需要保留相同行，使用 UNION ALL。
 - 只能包含一个 ORDER BY 子句，并且必须位于语句的最后。
 - 应用场景
-    - 在一个查询中从不同的表返回结构数据。
-    - 对一个表执行多个查询，按一个查询返回数据。
+  - 在一个查询中从不同的表返回结构数据。
+  - 对一个表执行多个查询，按一个查询返回数据。
 
 1. 组合查询
 
-    ```sql
-    SELECT cust_name, cust_contact, cust_email
-    FROM customers
-    WHERE cust_state IN ('IL', 'IN', 'MI')
-    UNION
-    SELECT cust_name, cust_contact, cust_email
-    FROM customers
-    WHERE cust_name = 'Fun4All';
-    ```
+   ```sql
+   SELECT cust_name, cust_contact, cust_email
+   FROM customers
+   WHERE cust_state IN ('IL', 'IN', 'MI')
+   UNION
+   SELECT cust_name, cust_contact, cust_email
+   FROM customers
+   WHERE cust_name = 'Fun4All';
+   ```
 
 ### 3. OIN vs UNION
 
@@ -394,10 +394,10 @@ SELECT AVG(DISTINCT 字段) AS 别名 FROM 表名;
 
 1. 指定多个列的排序方向
 
-    ```sql
-    SELECT 字段, ... FROM 表名
-    ORDER BY 字段 DESC, 字段 ASC;
-    ```
+   ```sql
+   SELECT 字段, ... FROM 表名
+   ORDER BY 字段 DESC, 字段 ASC;
+   ```
 
 ### 2. GROUP BY
 
@@ -409,15 +409,15 @@ SELECT AVG(DISTINCT 字段) AS 别名 FROM 表名;
 
 1. 分组
 
-    ```sql
-    SELECT 字段, COUNT(字段) AS 别名 FROM 表名 GROUP BY 字段;
-    ```
+   ```sql
+   SELECT 字段, COUNT(字段) AS 别名 FROM 表名 GROUP BY 字段;
+   ```
 
 2. 分组后排序
 
-    ```sql
-    SELECT 字段, COUNT(字段) AS 别名 FROM 表名 GROUP BY 字段 ORDER BY 字段 DESC;
-    ```
+   ```sql
+   SELECT 字段, COUNT(字段) AS 别名 FROM 表名 GROUP BY 字段 ORDER BY 字段 DESC;
+   ```
 
 ### 3. HAVING
 
@@ -430,10 +430,10 @@ SELECT AVG(DISTINCT 字段) AS 别名 FROM 表名;
 
 1. 使用 WHERE 和 HAVING 过滤数据
 
-    ```sql
-    SELECT 字段, COUNT(*) AS 别名 FROM 表名
-    WHERE 字段 IS NOT NULL GROUP BY 字段 HAVING COUNT(*) >= 1;
-    ```
+   ```sql
+   SELECT 字段, COUNT(*) AS 别名 FROM 表名
+   WHERE 字段 IS NOT NULL GROUP BY 字段 HAVING COUNT(*) >= 1;
+   ```
 
 ## 七、 数据定义
 
@@ -443,155 +443,155 @@ SELECT AVG(DISTINCT 字段) AS 别名 FROM 表名;
 
 1. 创建数据库
 
-    ```sql
-    CREATE DATABASE 表名;
-    ```
+   ```sql
+   CREATE DATABASE 表名;
+   ```
 
 2. 删除数据库
 
-    ```sql
-    DROP DATABASE 表名;
-    ```
+   ```sql
+   DROP DATABASE 表名;
+   ```
 
 3. 选择数据库
 
-    ```sql
-    USE test;
-    ```
+   ```sql
+   USE test;
+   ```
 
 ### 2. 数据表（TABLE）
 
 1. 创建数据表
-    1. 普通创建
+   1. 普通创建
 
-        ```sql
-        CREATE TABLE user (
-        id int(10) unsigned NOT NULL COMMENT 'Id',
-        username varchar(64) NOT NULL DEFAULT 'default' COMMENT '用户名',
-        password varchar(64) NOT NULL DEFAULT 'default' COMMENT '密码',
-        email varchar(64) NOT NULL DEFAULT 'default' COMMENT '邮箱'
-        ) COMMENT='用户表';
-        ```
+      ```sql
+      CREATE TABLE user (
+      id int(10) unsigned NOT NULL COMMENT 'Id',
+      username varchar(64) NOT NULL DEFAULT 'default' COMMENT '用户名',
+      password varchar(64) NOT NULL DEFAULT 'default' COMMENT '密码',
+      email varchar(64) NOT NULL DEFAULT 'default' COMMENT '邮箱'
+      ) COMMENT='用户表';
+      ```
 
-    2. 根据已有的表创建新表
+   2. 根据已有的表创建新表
 
-        ```sql
-        CREATE TABLE 表名 AS SELECT * FROM 表名;
-        ```
+      ```sql
+      CREATE TABLE 表名 AS SELECT * FROM 表名;
+      ```
 
 2. 删除数据表
 
-    ```sql
-    DROP TABLE 表名;
-    ```
+   ```sql
+   DROP TABLE 表名;
+   ```
 
 3. 修改数据表
-    1. 添加列
+   1. 添加列
 
-        ```sql
-        ALTER TABLE user ADD age int(3);
-        ```
+      ```sql
+      ALTER TABLE user ADD age int(3);
+      ```
 
-    2. 删除列
+   2. 删除列
 
-        ```sql
-        ALTER TABLE user DROP COLUMN age;
-        ```
+      ```sql
+      ALTER TABLE user DROP COLUMN age;
+      ```
 
-    3. 修改列
+   3. 修改列
 
-        ```sql
-        ALTER TABLE user MODIFY COLUMN age tinyint;
-        ```
+      ```sql
+      ALTER TABLE user MODIFY COLUMN age tinyint;
+      ```
 
-    4. 添加主键
+   4. 添加主键
 
-        ```sql
-        ALTER TABLE user ADD PRIMARY KEY (id);
-        ```
+      ```sql
+      ALTER TABLE user ADD PRIMARY KEY (id);
+      ```
 
-    5. 删除主键
+   5. 删除主键
 
-        ```sql
-        ALTER TABLE user DROP PRIMARY KEY;
-        ```
+      ```sql
+      ALTER TABLE user DROP PRIMARY KEY;
+      ```
 
 ### 3. 视图（VIEW）
 
 - 定义
-    - 视图是基于 SQL 语句的结果集的可视化的表。
-    - 视图是虚拟的表，本身不包含数据，也就不能对其进行索引操作。对视图的操作和对普通表的操作一样。
+  - 视图是基于 SQL 语句的结果集的可视化的表。
+  - 视图是虚拟的表，本身不包含数据，也就不能对其进行索引操作。对视图的操作和对普通表的操作一样。
 
 - 作用
-    - 简化复杂的 SQL 操作，比如复杂的联结；
-    - 只使用实际表的一部分数据；
-    - 通过只给用户访问视图的权限，保证数据的安全性；
-    - 更改数据格式和表示。
+  - 简化复杂的 SQL 操作，比如复杂的联结；
+  - 只使用实际表的一部分数据；
+  - 通过只给用户访问视图的权限，保证数据的安全性；
+  - 更改数据格式和表示。
 
 1. 创建视图
 
-    ```sql
-    CREATE VIEW top_10_user_view AS
-    SELECT id, username FROM user WHERE id < 10;
-    ```
+   ```sql
+   CREATE VIEW top_10_user_view AS
+   SELECT id, username FROM user WHERE id < 10;
+   ```
 
 2. 删除视图
 
-    ```sql
-    DROP VIEW top_10_user_view;
-    ```
+   ```sql
+   DROP VIEW top_10_user_view;
+   ```
 
 ### 4. 索引（INDEX）
 
 - 作用
-    - 通过索引可以更加快速高效地查询数据。
-    - 用户无法看到索引，它们只能被用来加速查询。
+  - 通过索引可以更加快速高效地查询数据。
+  - 用户无法看到索引，它们只能被用来加速查询。
 - 注意：更新一个包含索引的表需要比更新一个没有索引的表花费更多的时间，这是由于索引本身也需要更新。
 - 因此，理想的做法是仅仅在常常被搜索的列（以及表）上面创建索引。
 - 唯一索引：唯一索引表明此索引的每一个索引值只对应唯一的数据记录。
 
 1. 创建索引
 
-    ```sql
-    CREATE INDEX user_index ON user (id);
-    ```
+   ```sql
+   CREATE INDEX user_index ON user (id);
+   ```
 
 2. 创建唯一索引
 
-    ```sql
-    CREATE UNIQUE INDEX user_index ON user (id);
-    ```
+   ```sql
+   CREATE UNIQUE INDEX user_index ON user (id);
+   ```
 
 3. 删除索引
 
-    ```sql
-    ALTER TABLE user DROP INDEX user_index;
-    ```
+   ```sql
+   ALTER TABLE user DROP INDEX user_index;
+   ```
 
 ### 5. 约束
 
 - 如果存在违反约束的数据行为，行为会被约束终止。
 - 约束可以在创建表时规定（通过 CREATE TABLE 语句），或者在表创建之后规定（通过 ALTER TABLE 语句）。
 - 约束类型
-    - NOT NULL - 指示某列不能存储 NULL 值。
-    - UNIQUE - 保证某列的每行必须有唯一的值。
-    - PRIMARY KEY - NOT NULL 和 UNIQUE 的结合。确保某列（或两个列多个列的结合）有唯一标识，有助于更容易更快速地找到表中的一个特定的记录。
-    - FOREIGN KEY - 保证一个表中的数据匹配另一个表中的值的参照完整性。
-    - CHECK - 保证列中的值符合指定的条件。
-    - DEFAULT - 规定没有给列赋值时的默认值。
+  - NOT NULL - 指示某列不能存储 NULL 值。
+  - UNIQUE - 保证某列的每行必须有唯一的值。
+  - PRIMARY KEY - NOT NULL 和 UNIQUE 的结合。确保某列（或两个列多个列的结合）有唯一标识，有助于更容易更快速地找到表中的一个特定的记录。
+  - FOREIGN KEY - 保证一个表中的数据匹配另一个表中的值的参照完整性。
+  - CHECK - 保证列中的值符合指定的条件。
+  - DEFAULT - 规定没有给列赋值时的默认值。
 
 1. 创建表时使用约束条件：
 
-    ```sql
-    CREATE TABLE Users (
-    Id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增Id',
-    Username VARCHAR(64) NOT NULL UNIQUE DEFAULT 'default' COMMENT '用户名',
-    Password VARCHAR(64) NOT NULL DEFAULT 'default' COMMENT '密码',
-    Email VARCHAR(64) NOT NULL DEFAULT 'default' COMMENT '邮箱地址',
-    Enabled TINYINT(4) DEFAULT NULL COMMENT '是否有效',
-    PRIMARY KEY (Id)
-    ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
-    ```
+   ```sql
+   CREATE TABLE Users (
+   Id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '自增Id',
+   Username VARCHAR(64) NOT NULL UNIQUE DEFAULT 'default' COMMENT '用户名',
+   Password VARCHAR(64) NOT NULL DEFAULT 'default' COMMENT '密码',
+   Email VARCHAR(64) NOT NULL DEFAULT 'default' COMMENT '邮箱地址',
+   Enabled TINYINT(4) DEFAULT NULL COMMENT '是否有效',
+   PRIMARY KEY (Id)
+   ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
+   ```
 
 ## 八、 事务处理
 
@@ -599,10 +599,10 @@ SELECT AVG(DISTINCT 字段) AS 别名 FROM 表名;
 - MySQL 默认是隐式提交，每执行一条语句就把这条语句当成一个事务然后进行提交。当出现 START TRANSACTION 语句时，会关闭隐式提交；当 COMMIT 或 ROLLBACK 语句执行后，事务会自动关闭，重新恢复隐式提交。
 - 通过 set autocommit=0 可以取消自动提交，直到 set autocommit=1 才会提交；autocommit 标记是针对每个连接而不是针对服务器的。
 - 指令
-    - START TRANSACTION - 指令用于标记事务的起始点。
-    - SAVEPOINT - 指令用于创建保留点。
-    - ROLLBACK TO - 指令用于回滚到指定的保留点；如果没有设置保留点，则回退到 START TRANSACTION 语句处。
-    - COMMIT - 提交事务。
+  - START TRANSACTION - 指令用于标记事务的起始点。
+  - SAVEPOINT - 指令用于创建保留点。
+  - ROLLBACK TO - 指令用于回滚到指定的保留点；如果没有设置保留点，则回退到 START TRANSACTION 语句处。
+  - COMMIT - 提交事务。
 
 ```sql
 -- 开始事务
@@ -699,14 +699,14 @@ flush privileges；
 
 - 存储过程可以看成是对一系列 SQL 操作的批处理；
 - 好处：
-    - 代码封装，保证了一定的安全性；
-    - 代码复用；
-    - 由于是预先编译，因此具有很高的性能。
+  - 代码封装，保证了一定的安全性；
+  - 代码复用；
+  - 由于是预先编译，因此具有很高的性能。
 - 创建存储过程：
-    - 命令行中创建存储过程需要自定义分隔符，因为命令行是以 ; 为结束符，而存储过程中也包含了分号，因此会错误把这部分分号当成是结束符，造成语法错误。
-    - 包含 in、out 和 inout 三种参数。
-    - 给变量赋值都需要用 select into 语句。
-    - 每次只能给一个变量赋值，不支持集合的操作。
+  - 命令行中创建存储过程需要自定义分隔符，因为命令行是以 ; 为结束符，而存储过程中也包含了分号，因此会错误把这部分分号当成是结束符，造成语法错误。
+  - 包含 in、out 和 inout 三种参数。
+  - 给变量赋值都需要用 select into 语句。
+  - 每次只能给一个变量赋值，不支持集合的操作。
 
 ### 1. 创建存储过程
 
@@ -742,10 +742,10 @@ select @s as sum;
 - 在存储过程中使用游标可以对一个结果集进行移动遍历。
 - 游标主要用于交互式应用，其中用户需要对数据集中的任意行进行浏览和修改。
 - 使用游标的四个步骤：
-    - 声明游标，这个过程没有实际检索出数据；
-    - 打开游标；
-    - 取出数据；
-    - 关闭游标；
+  - 声明游标，这个过程没有实际检索出数据；
+  - 打开游标；
+  - 取出数据；
+  - 关闭游标；
 
 ```sql
 DELIMITER $
@@ -811,38 +811,38 @@ call getTotal();
 
 1. 语法：
 
-    ```sql
-    CREATE TRIGGER trigger_name
-    trigger_time
-    trigger_event
-    ON table_name
-    FOR EACH ROW
-    BEGIN
-    trigger_statements
-    END;
-    ```
+   ```sql
+   CREATE TRIGGER trigger_name
+   trigger_time
+   trigger_event
+   ON table_name
+   FOR EACH ROW
+   BEGIN
+   trigger_statements
+   END;
+   ```
 
 2. 说明：
-    - trigger_name：触发器名
-    - trigger_time: 触发器的触发时机。取值为 BEFORE 或 AFTER。
-    - trigger_event: 触发器的监听事件。取值为 INSERT、UPDATE 或 DELETE。
-    - table_name: 触发器的监听目标。指定在哪张表上建立触发器。
-    - FOR EACH ROW: 行级监视，Mysql 固定写法，其他 DBMS 不同。
-    - trigger_statements: 触发器执行动作。是一条或多条 SQL 语句的列表，列表内的每条语句都必须用分号 ; 来结尾。
+   - trigger_name：触发器名
+   - trigger_time: 触发器的触发时机。取值为 BEFORE 或 AFTER。
+   - trigger_event: 触发器的监听事件。取值为 INSERT、UPDATE 或 DELETE。
+   - table_name: 触发器的监听目标。指定在哪张表上建立触发器。
+   - FOR EACH ROW: 行级监视，Mysql 固定写法，其他 DBMS 不同。
+   - trigger_statements: 触发器执行动作。是一条或多条 SQL 语句的列表，列表内的每条语句都必须用分号 ; 来结尾。
 
 3. 示例：
 
-    ```sql
-    DELIMITER $
-    CREATE TRIGGER `trigger_insert_user`
-    AFTER INSERT ON `user`
-    FOR EACH ROW
-    BEGIN
-    INSERT INTO `user_history`(user_id, operate_type, operate_time)
-    VALUES (NEW.id, 'add a user',  now());
-    END $
-    DELIMITER;
-    ```
+   ```sql
+   DELIMITER $
+   CREATE TRIGGER `trigger_insert_user`
+   AFTER INSERT ON `user`
+   FOR EACH ROW
+   BEGIN
+   INSERT INTO `user_history`(user_id, operate_type, operate_time)
+   VALUES (NEW.id, 'add a user',  now());
+   END $
+   DELIMITER;
+   ```
 
 ### 4. 查看触发器
 

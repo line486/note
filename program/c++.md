@@ -399,25 +399,25 @@ try {
 ## 12. C++11/14/17/20 新特性（简要）
 
 - **auto**：自动类型推导
-    ```cpp
-    auto x = 42; // x 是 int
-    ```
+  ```cpp
+  auto x = 42; // x 是 int
+  ```
 - **范围 for 循环**
-    ```cpp
-    for (const auto& item : container) { ... }
-    ```
+  ```cpp
+  for (const auto& item : container) { ... }
+  ```
 - **Lambda 表达式**
-    ```cpp
-    auto square = [](int x) { return x * x; };
-    ```
+  ```cpp
+  auto square = [](int x) { return x * x; };
+  ```
 - **移动语义与右值引用**（`&&`）
 - **结构化绑定**（C++17）
-    ```cpp
-    std::map<std::string, int> m = {{"a", 1}};
-    for (const auto& [key, value] : m) {
-        std::cout << key << ": " << value << std::endl;
-    }
-    ```
+  ```cpp
+  std::map<std::string, int> m = {{"a", 1}};
+  for (const auto& [key, value] : m) {
+      std::cout << key << ": " << value << std::endl;
+  }
+  ```
 
 ## 13. 编译与构建
 

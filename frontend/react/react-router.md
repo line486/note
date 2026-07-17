@@ -29,17 +29,19 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const router = createBrowserRouter([
-    {
-        path: "/login",
-        element: <div>登录</div>,
-    },
-    {
-        path: "/article",
-        element: <div>文章</div>,
-    },
+  {
+    path: "/login",
+    element: <div>登录</div>,
+  },
+  {
+    path: "/article",
+    element: <div>文章</div>,
+  },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(<RouterProvider router={router} />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />,
+);
 ```
 
 ## 抽象路由模块

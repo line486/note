@@ -95,9 +95,9 @@ use myFirstDB
 
 ```javascript
 db.users.insertOne({
-    name: "李四",
-    age: 30,
-    email: "lisi@example.com",
+  name: "李四",
+  age: 30,
+  email: "lisi@example.com",
 });
 ```
 
@@ -105,8 +105,8 @@ db.users.insertOne({
 
 ```javascript
 db.users.insertMany([
-    { name: "王五", age: 28 },
-    { name: "赵六", age: 22, hobbies: ["读书", "游泳"] },
+  { name: "王五", age: 28 },
+  { name: "赵六", age: 22, hobbies: ["读书", "游泳"] },
 ]);
 ```
 
@@ -219,8 +219,8 @@ db.users.dropIndex({ name: 1 });
 ## 数据模型设计建议
 
 - **嵌入 vs 引用**：
-    - 如果数据经常一起使用且不常更新，考虑嵌入（将子文档直接放在父文档中）。
-    - 如果数据独立、体积大或被多个文档共享，使用引用（存储另一个文档的 `_id`）。
+  - 如果数据经常一起使用且不常更新，考虑嵌入（将子文档直接放在父文档中）。
+  - 如果数据独立、体积大或被多个文档共享，使用引用（存储另一个文档的 `_id`）。
 
 - **避免深度嵌套**：MongoDB 不支持跨嵌套层级的高效查询。
 

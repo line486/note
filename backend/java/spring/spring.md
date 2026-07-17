@@ -7,15 +7,15 @@
 1. `Spring` 是轻量级的开源的 `JavaEE` 框架
 2. `Spring` 可以解决企业应用开发的复杂性
 3. `Spring` 有两个核心部分：`IOC` 和 `AOP`
-    - `IOC`：控制反转，把创建对象过程交给 `Spring` 进行管理
-    - `AOP`：面向切面，不修改源代码进行功能增强
+   - `IOC`：控制反转，把创建对象过程交给 `Spring` 进行管理
+   - `AOP`：面向切面，不修改源代码进行功能增强
 4. `Spring` 特点
-    - 方便解耦，简化开发
-    - `AOP` 编程支持
-    - 方便程序测试
-    - 方便和其他框架进行整合
-    - 方便进行事务操作
-    - 降低 API 开发难度
+   - 方便解耦，简化开发
+   - `AOP` 编程支持
+   - 方便程序测试
+   - 方便和其他框架进行整合
+   - 方便进行事务操作
+   - 降低 API 开发难度
 
 ## IOC 容器 ↓↓↓
 
@@ -27,102 +27,102 @@
 
 2. 引入依赖
 
-    ```xml
-    <dependencies>
-        <!--基于Maven依赖传递性,导入spring-context依赖即可导入当前所需要所有jar包-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.2.21.RELEAS</version>
-        </dependency>
-        <!--junit测试-->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
-    ```
+   ```xml
+   <dependencies>
+       <!--基于Maven依赖传递性,导入spring-context依赖即可导入当前所需要所有jar包-->
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-context</artifactId>
+           <version>5.2.21.RELEAS</version>
+       </dependency>
+       <!--junit测试-->
+       <dependency>
+           <groupId>junit</groupId>
+           <artifactId>junit</artifactId>
+           <version>4.12</version>
+           <scope>test</scope>
+       </dependency>
+       <!-- lombok -->
+       <dependency>
+           <groupId>org.projectlombok</groupId>
+           <artifactId>lombok</artifactId>
+           <version>RELEASE</version>
+           <scope>compile</scope>
+       </dependency>
+   </dependencies>
+   ```
 
 3. 创建 Spring 配置文件
 
-    在 `resources` 目录，添加 `spring` 的配置文件 `applicationContext.xml`
+   在 `resources` 目录，添加 `spring` 的配置文件 `applicationContext.xml`
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <beans xmlns="http://www.springframework.org/schema/beans"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
-    </beans>
-    ```
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <beans xmlns="http://www.springframework.org/schema/beans"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+   </beans>
+   ```
 
 4. 添加 Bean
 
-    Book 类
+   Book 类
 
-    ```java
-    import lombok.Data;
+   ```java
+   import lombok.Data;
 
-    @Data
-    public class Book {
-        Integer id;
-        String title;
-        String author;
-        String publisher;
-    }
+   @Data
+   public class Book {
+       Integer id;
+       String title;
+       String author;
+       String publisher;
+   }
 
-    ```
+   ```
 
-    配置
+   配置
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <beans xmlns="http://www.springframework.org/schema/beans"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
-        <!--
-            bean:配置一个bean对象,将对象交给IOC容器管理
-            属性:
-                id:bean的唯一表示,不能重复
-                class:设置bean对象所对应的类型
-         -->
-        <bean id="book" class="org.example.pojo.Book"/>
-        <!-- scope: 设置单例或者非单例：prototype/singleton 默认为singleton -->
-    </beans>
-    ```
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <beans xmlns="http://www.springframework.org/schema/beans"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <!--
+           bean:配置一个bean对象,将对象交给IOC容器管理
+           属性:
+               id:bean的唯一表示,不能重复
+               class:设置bean对象所对应的类型
+        -->
+       <bean id="book" class="org.example.pojo.Book"/>
+       <!-- scope: 设置单例或者非单例：prototype/singleton 默认为singleton -->
+   </beans>
+   ```
 
-    > [!TIP]
-    >
-    > `singleton` 只有一个实例，也即是单例模式；
-    > `prototype` 访问一次创建一个实例，相当于 `new` 。
+   > [!TIP]
+   >
+   > `singleton` 只有一个实例，也即是单例模式；
+   > `prototype` 访问一次创建一个实例，相当于 `new` 。
 
 5. 获取 Bean（创建IOC容器）
 
-    ```java
-    @Slf4j
-    public class ApplicationContextTest {
+   ```java
+   @Slf4j
+   public class ApplicationContextTest {
 
-        @Test
-        public void test() {
-      // 创建 ApplicationContext 对象，加载 spring 配置文件（创建IOC容器）
-            ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
-      // 调用 context 中的 getBean 方法获取 ioc 容器中的 bean
-            Book book = context.getBean(Book.class);
-      // 调用 bean 对象中的方法
-            log.info("book = {}", book.getTitle());
-        }
-    }
-    ```
+       @Test
+       public void test() {
+     // 创建 ApplicationContext 对象，加载 spring 配置文件（创建IOC容器）
+           ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+     // 调用 context 中的 getBean 方法获取 ioc 容器中的 bean
+           Book book = context.getBean(Book.class);
+     // 调用 bean 对象中的方法
+           log.info("book = {}", book.getTitle());
+       }
+   }
+   ```
 
 ## 依赖注入
 
@@ -386,39 +386,39 @@ public void myCarTest() {
 ```
 
 1. 什么是自动装配
-    - 根据指定装配规则（属性名称或者属性类型），`Spring` 自动将匹配的属性值进行注入
+   - 根据指定装配规则（属性名称或者属性类型），`Spring` 自动将匹配的属性值进行注入
 
 2. 演示自动装配过程
 
-    根据属性名称自动注入
+   根据属性名称自动注入
 
-    ```xml
-    <!--实现自动装配
-     bean 标签属性 autowire，配置自动装配
-     autowire 属性常用两个值：
-     byName 根据属性名称注入 ，注入值 bean 的 id 值和类属性名称一样
-     byType 根据属性类型注入
-    -->
-    <bean id="emp" class="com.atguigu.spring5.autowire.Emp" autowire="byName">
-     <!--<property name="dept" ref="dept"></property>-->
-    </bean>
-    <bean id="dept" class="com.atguigu.spring5.autowire.Dept"></bean>
-    ```
+   ```xml
+   <!--实现自动装配
+    bean 标签属性 autowire，配置自动装配
+    autowire 属性常用两个值：
+    byName 根据属性名称注入 ，注入值 bean 的 id 值和类属性名称一样
+    byType 根据属性类型注入
+   -->
+   <bean id="emp" class="com.atguigu.spring5.autowire.Emp" autowire="byName">
+    <!--<property name="dept" ref="dept"></property>-->
+   </bean>
+   <bean id="dept" class="com.atguigu.spring5.autowire.Dept"></bean>
+   ```
 
-    根据属性类型自动注入
+   根据属性类型自动注入
 
-    ```xml
-    <!--实现自动装配
-     bean 标签属性 autowire，配置自动装配
-     autowire 属性常用两个值：
-     byName 根据属性名称注入 ，注入值 bean 的 id 值和类属性名称一样
-     byType 根据属性类型注入
-    -->
-    <bean id="emp" class="com.atguigu.spring5.autowire.Emp" autowire="byType">
-     <!--<property name="dept" ref="dept"></property>-->
-    </bean>
-    <bean id="dept" class="com.atguigu.spring5.autowire.Dept"></bean>
-    ```
+   ```xml
+   <!--实现自动装配
+    bean 标签属性 autowire，配置自动装配
+    autowire 属性常用两个值：
+    byName 根据属性名称注入 ，注入值 bean 的 id 值和类属性名称一样
+    byType 根据属性类型注入
+   -->
+   <bean id="emp" class="com.atguigu.spring5.autowire.Emp" autowire="byType">
+    <!--<property name="dept" ref="dept"></property>-->
+   </bean>
+   <bean id="dept" class="com.atguigu.spring5.autowire.Dept"></bean>
+   ```
 
 ## AOP 容器 ↓↓↓
 
@@ -430,11 +430,11 @@ public void myCarTest() {
 
 1. 第一种情况是有接口的情况，使用 JDK 动态代理
 
-    创建接口实现类代理对象，增强类的方法。
+   创建接口实现类代理对象，增强类的方法。
 
 2. 第二种情况是没有接口的情况，使用 CGLIB 动态代理
 
-    创建子类的代理对象，增强类的方法。
+   创建子类的代理对象，增强类的方法。
 
 ## JDK 动态代理
 
@@ -444,318 +444,318 @@ public void myCarTest() {
 
 - 调用 `newProxyInstance` 方法。
 - 该方法有三个参数：
-    - 第一个：类加载器。
-    - 第二个：增强方法所在的类，这个类实现的接口，支持多个接口。
-    - 第三个：实现这个接口 `InvocationHandler`，创建代理对象，写增强方法。
+  - 第一个：类加载器。
+  - 第二个：增强方法所在的类，这个类实现的接口，支持多个接口。
+  - 第三个：实现这个接口 `InvocationHandler`，创建代理对象，写增强方法。
 
 ### 编写 JDK 动态代理代码
 
 1. 创建接口，定义方法
 
-    ```java
-    package cn.sugarscat.example.mapper;
-    public interface UserMapper {
-        public int add(int a, int b);
-        public String update(String id);
-    }
-    ```
+   ```java
+   package cn.sugarscat.example.mapper;
+   public interface UserMapper {
+       public int add(int a, int b);
+       public String update(String id);
+   }
+   ```
 
 2. 创建接口实现类，实现方法
 
-    ```java
-    package cn.sugarscat.example.mapper;
+   ```java
+   package cn.sugarscat.example.mapper;
 
-    public class UserMapperImpl implements UserMapper {
-        @Override
-        public int add(int a, int b) {
-            System.out.println("add方法执行了...");
-            return a + b;
-        }
+   public class UserMapperImpl implements UserMapper {
+       @Override
+       public int add(int a, int b) {
+           System.out.println("add方法执行了...");
+           return a + b;
+       }
 
-        @Override
-        public String update(String id) {
-            System.out.println("update方法执行了");
-            return "id:" + id;
-        }
-    }
-    ```
+       @Override
+       public String update(String id) {
+           System.out.println("update方法执行了");
+           return "id:" + id;
+       }
+   }
+   ```
 
 3. 使用 `Proxy` 类创建接口代理对象
 
-    ```java
-    package cn.sugarscat.example.mapper;
+   ```java
+   package cn.sugarscat.example.mapper;
 
-    import java.lang.reflect.InvocationHandler;
-    import java.lang.reflect.Method;
-    import java.lang.reflect.Proxy;
-    import java.util.Arrays;
+   import java.lang.reflect.InvocationHandler;
+   import java.lang.reflect.Method;
+   import java.lang.reflect.Proxy;
+   import java.util.Arrays;
 
-    public class JDKProxy {
-        public static void main(String[] args) {
-            // 创建接口实现类代理对象
-            Class[] interfaces = {UserMapper.class};
+   public class JDKProxy {
+       public static void main(String[] args) {
+           // 创建接口实现类代理对象
+           Class[] interfaces = {UserMapper.class};
 
-            // 这里可以通过IOC控制反转得到对象，但是我这里直接new了
-            UserMapperImpl userMapperImpl = new UserMapperImpl();
+           // 这里可以通过IOC控制反转得到对象，但是我这里直接new了
+           UserMapperImpl userMapperImpl = new UserMapperImpl();
 
-            // 这里要进行AOP了，就是在不进行修改源码的情况，为代码增加逻辑
+           // 这里要进行AOP了，就是在不进行修改源码的情况，为代码增加逻辑
 
-            UserMapper userMapper = (UserMapper)Proxy.newProxyInstance(JDKProxy.class.getClassLoader(), interfaces, new UserMapperProxy(userMapperImpl));
-            int result = userMapper.add(1,2);
-            String res = userMapper.update("EDDD-DSSS");
-            System.out.println("result:" + result);
-        }
-    }
+           UserMapper userMapper = (UserMapper)Proxy.newProxyInstance(JDKProxy.class.getClassLoader(), interfaces, new UserMapperProxy(userMapperImpl));
+           int result = userMapper.add(1,2);
+           String res = userMapper.update("EDDD-DSSS");
+           System.out.println("result:" + result);
+       }
+   }
 
 
-    // 创建代理对象代码
-    class UserMapperProxy implements InvocationHandler {
-        // 1. 把创建的是谁的代理对象，把谁传进来
-        // 有参数的构造
+   // 创建代理对象代码
+   class UserMapperProxy implements InvocationHandler {
+       // 1. 把创建的是谁的代理对象，把谁传进来
+       // 有参数的构造
 
-        private Object object;
-        public UserMapperProxy(Object object) {
-            this.object = object;
-        }
+       private Object object;
+       public UserMapperProxy(Object object) {
+           this.object = object;
+       }
 
-        // 写增强的逻辑
-        @Override
-        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-            // 方法之前
-            System.out.println("方法执行之前： " + method.getName() + "传递的参数" + Arrays.toString(args));
+       // 写增强的逻辑
+       @Override
+       public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+           // 方法之前
+           System.out.println("方法执行之前： " + method.getName() + "传递的参数" + Arrays.toString(args));
 
-            // 被增强的方法执行
-            Object res = method.invoke(object, args);
+           // 被增强的方法执行
+           Object res = method.invoke(object, args);
 
-            // 方法之后
-            System.out.println("方法执行之后.."+object);
+           // 方法之后
+           System.out.println("方法执行之后.."+object);
 
-            // 返回res，增强的方法
-            return res;
-        }
-    }
-    ```
+           // 返回res，增强的方法
+           return res;
+       }
+   }
+   ```
 
 ## AOP术语
 
 1. 连接点
 
-    在一个类中，哪些方法可以被增强，这些方法就叫连接点；
+   在一个类中，哪些方法可以被增强，这些方法就叫连接点；
 
 2. 切入点
 
-    实际真正被增强的方法，被称为切入点；
+   实际真正被增强的方法，被称为切入点；
 
 3. 通知（增强）
 
-    > 实际增强的代码逻辑部分，就是通知。
-    - 前置通知：被增强的方法前执行；
-    - 后置通知：被增强的方法后执行；
-    - 环绕通知：被增强的方法前后都执行；
-    - 异常通知：被增强的方法出现异常会执行；
-    - 最终通知：类似于 `finally`，永远会执行；
+   > 实际增强的代码逻辑部分，就是通知。
+   - 前置通知：被增强的方法前执行；
+   - 后置通知：被增强的方法后执行；
+   - 环绕通知：被增强的方法前后都执行；
+   - 异常通知：被增强的方法出现异常会执行；
+   - 最终通知：类似于 `finally`，永远会执行；
 
 4. 切面
 
-    是动作上的操作，把通知应用到切入点的过程，就叫切面；
+   是动作上的操作，把通知应用到切入点的过程，就叫切面；
 
 ## XML 案例
 
 1. 导入依赖
 
-    ```xml
-    <!--spring aop依赖-->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-aop</artifactId>
-        <version>5.1.9.RELEASE</version>
-    </dependency>
+   ```xml
+   <!--spring aop依赖-->
+   <dependency>
+       <groupId>org.springframework</groupId>
+       <artifactId>spring-aop</artifactId>
+       <version>5.1.9.RELEASE</version>
+   </dependency>
 
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-aspects</artifactId>
-        <version>5.1.9.RELEASE</version>
-    </dependency>
+   <dependency>
+       <groupId>org.springframework</groupId>
+       <artifactId>spring-aspects</artifactId>
+       <version>5.1.9.RELEASE</version>
+   </dependency>
 
-    <!--        aop实现依赖-->
-    <dependency>
-        <groupId>aopalliance</groupId>
-        <artifactId>aopalliance</artifactId>
-        <version>1.0</version>
-    </dependency>
-    <!--        切面实现依赖-->
-    <dependency>
-        <groupId>org.aspectj</groupId>
-        <artifactId>aspectjweaver</artifactId>
-        <version>1.9.1</version>
-    </dependency>
-    ```
+   <!--        aop实现依赖-->
+   <dependency>
+       <groupId>aopalliance</groupId>
+       <artifactId>aopalliance</artifactId>
+       <version>1.0</version>
+   </dependency>
+   <!--        切面实现依赖-->
+   <dependency>
+       <groupId>org.aspectj</groupId>
+       <artifactId>aspectjweaver</artifactId>
+       <version>1.9.1</version>
+   </dependency>
+   ```
 
 2. 创建配置文件
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <beans xmlns="http://www.springframework.org/schema/beans"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:p="http://www.springframework.org/schema/p"
-           xmlns:c="http://www.springframework.org/schema/c"
-           xmlns:context="http://www.springframework.org/schema/context"
-           xmlns:aop="http://www.springframework.org/schema/aop"
-           xsi:schemaLocation="http://www.springframework.org/schema/beans
-            http://www.springframework.org/schema/beans/spring-beans.xsd
-            http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context.xsd
-            http://www.springframework.org/schema/aop
-            http://www.springframework.org/schema/aop/spring-aop.xsd">
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <beans xmlns="http://www.springframework.org/schema/beans"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:p="http://www.springframework.org/schema/p"
+          xmlns:c="http://www.springframework.org/schema/c"
+          xmlns:context="http://www.springframework.org/schema/context"
+          xmlns:aop="http://www.springframework.org/schema/aop"
+          xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 
-        <!--注册Bean-->
-        <bean name="userDao" class="org.example.dao.Impl.UserDaoImpl"></bean>
-        <bean name="xmlAdvice" class="org.example.dao.XmlAdvice"></bean>
+       <!--注册Bean-->
+       <bean name="userDao" class="org.example.dao.Impl.UserDaoImpl"></bean>
+       <bean name="xmlAdvice" class="org.example.dao.XmlAdvice"></bean>
 
-        <!--配置Spring AOP-->
-        <aop:config>
-            <!--指定切入点-->
-            <aop:pointcut id="pointcut" expression="execution(*
-            org.example.dao.Impl.UserDaoImpl.*(..))"/>
-            <!--指定切面-->
-            <aop:aspect ref = "xmlAdvice">
-                <!--指定前置通知-->
-                <aop:before method="before" pointcut-ref="pointcut"/>
-                <!--指定返回通知-->
-                <aop:after-returning method="afterReturning" pointcut-ref="pointcut"/>
-                <!--指定环绕通知-->
-                <aop:around method="around" pointcut-ref="pointcut"/>
-                <!--指定异常通知-->
-                <aop:after-throwing method="afterException" pointcut-ref="pointcut"/>
-                <!--指定后置通知-->
-                <aop:after method="after" pointcut-ref="pointcut"/>
-            </aop:aspect>
-        </aop:config>
+       <!--配置Spring AOP-->
+       <aop:config>
+           <!--指定切入点-->
+           <aop:pointcut id="pointcut" expression="execution(*
+           org.example.dao.Impl.UserDaoImpl.*(..))"/>
+           <!--指定切面-->
+           <aop:aspect ref = "xmlAdvice">
+               <!--指定前置通知-->
+               <aop:before method="before" pointcut-ref="pointcut"/>
+               <!--指定返回通知-->
+               <aop:after-returning method="afterReturning" pointcut-ref="pointcut"/>
+               <!--指定环绕通知-->
+               <aop:around method="around" pointcut-ref="pointcut"/>
+               <!--指定异常通知-->
+               <aop:after-throwing method="afterException" pointcut-ref="pointcut"/>
+               <!--指定后置通知-->
+               <aop:after method="after" pointcut-ref="pointcut"/>
+           </aop:aspect>
+       </aop:config>
 
-    </beans>
-    ```
+   </beans>
+   ```
 
 3. 一些类
 
-    `UserDaoImpl.java`
+   `UserDaoImpl.java`
 
-    ```java
-    package org.example.dao.Impl;
+   ```java
+   package org.example.dao.Impl;
 
-    import org.example.dao.UserDao;
+   import org.example.dao.UserDao;
 
-    public class UserDaoImpl implements UserDao {
+   public class UserDaoImpl implements UserDao {
 
-        public void insert(){
-            System.out.println("添加用户信息");
-        }
+       public void insert(){
+           System.out.println("添加用户信息");
+       }
 
-        public void delete(){
-            System.out.println("删除用户信息");
-        }
+       public void delete(){
+           System.out.println("删除用户信息");
+       }
 
-        public void update(){
-            System.out.println("更新用户信息");
-        }
+       public void update(){
+           System.out.println("更新用户信息");
+       }
 
-        public void select(){
-            System.out.println("查询用户信息");
-        }
-    }
-    ```
+       public void select(){
+           System.out.println("查询用户信息");
+       }
+   }
+   ```
 
-    `UserDao.java`
+   `UserDao.java`
 
-    ```java
-    package org.example.dao;
+   ```java
+   package org.example.dao;
 
-    public interface UserDao {
-        public void insert();
-        public void delete();
-        public void update();
-        public void select();
-    }
-    ```
+   public interface UserDao {
+       public void insert();
+       public void delete();
+       public void update();
+       public void select();
+   }
+   ```
 
-    `XmlAdvice.java`
+   `XmlAdvice.java`
 
-    ```java
-    package org.example.dao;
+   ```java
+   package org.example.dao;
 
-    import org.aspectj.lang.JoinPoint;
-    import org.aspectj.lang.ProceedingJoinPoint;
+   import org.aspectj.lang.JoinPoint;
+   import org.aspectj.lang.ProceedingJoinPoint;
 
-    public class XmlAdvice {
-        //前置通知
-        public void before(JoinPoint joinPoint){        //使用JoinPoint接口实例作为参数获得目标对象的类名和方法名
-            System.out.print("这是前置通知！");
-            System.out.print("目标类：" + joinPoint.getTarget());
-            System.out.println("，被织入增强处理的目标方法为："+joinPoint.getSignature().getName());
-        }
-        //返回通知
-        public void afterReturning(JoinPoint joinPoint){//使用JoinPoint接口实例作为参数获得目标对象的类名和方法名
-            System.out.print("这是返回通知（方法不出现异常时调用）！");
-            System.out.println("被织入增强处理的目标方法为："+joinPoint.getSignature().getName());
-        }
-        /**
-         * 环绕通知
-         * ProceedingJoinPoint是JoinPoint子接口，表示可以执行目标方法
-         * 1.必须是Object类型的返回值
-         * 2.必须接收一个参数，类型为ProceedingJoinPoint
-         * 3.必须throws Throwable
-         */
-        public Object around(ProceedingJoinPoint point)throws Throwable{//使用ProceedingJoinPoint接口实例作为参数获得目标对象的类名和方法名
-            System.out.println("这是环绕通知之前的部分！");
-            //调用目标方法
-            Object object = point.proceed();
-            System.out.println("这是环绕通知之前的部分！");
-            return object;
-        }
-        //异常通知
-        public void afterException(){
-            System.out.println("异常通知！");
-        }
-        //后置通知
-        public void after(){
-            System.out.println("这是后置通知！");
-        }
-    }
-    ```
+   public class XmlAdvice {
+       //前置通知
+       public void before(JoinPoint joinPoint){        //使用JoinPoint接口实例作为参数获得目标对象的类名和方法名
+           System.out.print("这是前置通知！");
+           System.out.print("目标类：" + joinPoint.getTarget());
+           System.out.println("，被织入增强处理的目标方法为："+joinPoint.getSignature().getName());
+       }
+       //返回通知
+       public void afterReturning(JoinPoint joinPoint){//使用JoinPoint接口实例作为参数获得目标对象的类名和方法名
+           System.out.print("这是返回通知（方法不出现异常时调用）！");
+           System.out.println("被织入增强处理的目标方法为："+joinPoint.getSignature().getName());
+       }
+       /**
+        * 环绕通知
+        * ProceedingJoinPoint是JoinPoint子接口，表示可以执行目标方法
+        * 1.必须是Object类型的返回值
+        * 2.必须接收一个参数，类型为ProceedingJoinPoint
+        * 3.必须throws Throwable
+        */
+       public Object around(ProceedingJoinPoint point)throws Throwable{//使用ProceedingJoinPoint接口实例作为参数获得目标对象的类名和方法名
+           System.out.println("这是环绕通知之前的部分！");
+           //调用目标方法
+           Object object = point.proceed();
+           System.out.println("这是环绕通知之前的部分！");
+           return object;
+       }
+       //异常通知
+       public void afterException(){
+           System.out.println("异常通知！");
+       }
+       //后置通知
+       public void after(){
+           System.out.println("这是后置通知！");
+       }
+   }
+   ```
 
 4. 测测程序
 
-    ```java
-    import lombok.extern.slf4j.Slf4j;
+   ```java
+   import lombok.extern.slf4j.Slf4j;
 
-    import org.example.dao.UserDao;
-    import org.junit.Test;
-    import org.springframework.context.ApplicationContext;
-    import org.springframework.context.support.ClassPathXmlApplicationContext;
+   import org.example.dao.UserDao;
+   import org.junit.Test;
+   import org.springframework.context.ApplicationContext;
+   import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-    @Slf4j
-    public class AppTest {
+   @Slf4j
+   public class AppTest {
 
-        @Test
-        public void test() {
-            log.info("test");
-        }
+       @Test
+       public void test() {
+           log.info("test");
+       }
 
-        @Test
-        public void AOPTest() {
-            ApplicationContext context = new
-                    ClassPathXmlApplicationContext("ApplicationContext.xml");
-            UserDao userDao = context.getBean("userDao",UserDao.class);
-            userDao.delete();
-            System.out.println();
-            userDao.insert();
-            System.out.println();
-            userDao.select();
-            System.out.println();
-            userDao.update();
-        }
-    }
-    ```
+       @Test
+       public void AOPTest() {
+           ApplicationContext context = new
+                   ClassPathXmlApplicationContext("ApplicationContext.xml");
+           UserDao userDao = context.getBean("userDao",UserDao.class);
+           userDao.delete();
+           System.out.println();
+           userDao.insert();
+           System.out.println();
+           userDao.select();
+           System.out.println();
+           userDao.update();
+       }
+   }
+   ```
 
 ## AOP 的 XML 元素
 
@@ -899,9 +899,9 @@ public void doAspect(){}
   `View` :视图层，指工程中的 `html`, `jsp` 等页面，作用是和用户进行交互，展示数据
   `Controler`:控制层，指工程中的 `Servlet`,作用是接收请求和响应浏览器
 - 流程：
-    - 用户通过视图层发送请求到服务器，在服务器中请求被 `Controller` 接收
-    - `Controller` 调用相应的 `Model` 层处理请求，处理完毕后结果返回到 `Controller`
-    - `Controller` 再根据请求处理的结果找到对应的View视图，渲染数据后最终响应给浏览器
+  - 用户通过视图层发送请求到服务器，在服务器中请求被 `Controller` 接收
+  - `Controller` 调用相应的 `Model` 层处理请求，处理完毕后结果返回到 `Controller`
+  - `Controller` 再根据请求处理的结果找到对应的View视图，渲染数据后最终响应给浏览器
 
 ## 实现原理
 
@@ -1275,13 +1275,13 @@ public class FileUploadController {
 - `Servlet`：处理 `Reequest` 请求和 `Response` 响应
 - 过滤器(`Filter`)：对 `Request` 请求起到过滤作用，作用在 `Servlet` 之前，如果配置为 `/*` 可以为所有的资源(`servlet`、`js/css`静态资源等)进行过滤处理
 - 监听器(`Listener`)：实现了 `javax.servlet.ServletContextListener` 接口的服务器端组件，它随 `Web` 应用的启动而启动，只初始化一次，然后一直监视，随`Web`应用的停止而销毁
-    - 作用一：做初始化工作，`web` 应用中 `spring` 容器启动 `ContextLoaderListener`
-    - 作用二：监听 `web` 中的特定事件，比如 `HttpSession`，`ServletRequest` 的创建和销毁；变量的创建、销毁和修改等可以在某些动作 前后增加处理，实现监控，比如说统计在线人数，利用 `HttpSessionListener` 等
+  - 作用一：做初始化工作，`web` 应用中 `spring` 容器启动 `ContextLoaderListener`
+  - 作用二：监听 `web` 中的特定事件，比如 `HttpSession`，`ServletRequest` 的创建和销毁；变量的创建、销毁和修改等可以在某些动作 前后增加处理，实现监控，比如说统计在线人数，利用 `HttpSessionListener` 等
 - 拦截器(`Interceptor`)：是 `Spring MVC`、`Struts` 等表现层框架自己的，不会拦截 `jsp/html/css/image` 等的访问，只会拦截访问的控制器方法(`Handler`)
-    - `servlet`、`filter`、`listener` 是配置在 `web.xml` 中，`interceptor` 是配置在表现层框架自己的配置文件中
-    - 在 `Handler` 业务逻辑执行之前拦截一次
-    - 在 `Handler` 逻辑执行完但是还没有跳转页面之前拦截一次
-    - 在跳转页面后拦截一次
+  - `servlet`、`filter`、`listener` 是配置在 `web.xml` 中，`interceptor` 是配置在表现层框架自己的配置文件中
+  - 在 `Handler` 业务逻辑执行之前拦截一次
+  - 在 `Handler` 逻辑执行完但是还没有跳转页面之前拦截一次
+  - 在跳转页面后拦截一次
 
 ### 拦截器基本概念
 

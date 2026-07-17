@@ -246,7 +246,9 @@ var BProgress = class {
       typeof this.settings.parent === "string"
         ? document.querySelector(this.settings.parent)
         : this.settings.parent;
-    const progressElements = parent ? Array.from(parent.querySelectorAll(".bprogress")) : [];
+    const progressElements = parent
+      ? Array.from(parent.querySelectorAll(".bprogress"))
+      : [];
     if (this.settings.template !== null && progressElements.length === 0) {
       addClass(document.documentElement, "bprogress-busy");
       const progress = document.createElement("div");
@@ -278,9 +280,11 @@ var BProgress = class {
             speed: this.settings.speed,
             ease: this.settings.easing,
             perc,
-          })
+          }),
         );
-        const indeterminateElem = progress.querySelector(this.settings.indeterminateSelector);
+        const indeterminateElem = progress.querySelector(
+          this.settings.indeterminateSelector,
+        );
         if (indeterminateElem) {
           indeterminateElem.style.display = "none";
         }
@@ -289,7 +293,9 @@ var BProgress = class {
         if (bar) {
           bar.style.display = "none";
         }
-        const indeterminateElem = progress.querySelector(this.settings.indeterminateSelector);
+        const indeterminateElem = progress.querySelector(
+          this.settings.indeterminateSelector,
+        );
         if (indeterminateElem) {
           indeterminateElem.style.display = "";
         }
@@ -420,7 +426,9 @@ var BProgress = class {
     } else if (this.settings.positionUsing === "width") {
       barCSS = {
         width: `${this.settings.direction === "rtl" ? 100 - computedPerc : computedPerc + 100}%`,
-        ...(this.settings.direction === "rtl" ? { right: "0", left: "auto" } : {}),
+        ...(this.settings.direction === "rtl"
+          ? { right: "0", left: "auto" }
+          : {}),
       };
     } else if (this.settings.positionUsing === "margin") {
       barCSS =
@@ -435,13 +443,16 @@ var BProgress = class {
 
 // src/lib/same-url.ts
 function isSameURL(target, current) {
-  const cleanTarget = target.protocol + "//" + target.host + target.pathname + target.search;
-  const cleanCurrent = current.protocol + "//" + current.host + current.pathname + current.search;
+  const cleanTarget =
+    target.protocol + "//" + target.host + target.pathname + target.search;
+  const cleanCurrent =
+    current.protocol + "//" + current.host + current.pathname + current.search;
   return cleanTarget === cleanCurrent;
 }
 function isSameURLWithoutSearch(target, current) {
   const cleanTarget = target.protocol + "//" + target.host + target.pathname;
-  const cleanCurrent = current.protocol + "//" + current.host + current.pathname;
+  const cleanCurrent =
+    current.protocol + "//" + current.host + current.pathname;
   return cleanTarget === cleanCurrent;
 }
 
@@ -453,7 +464,9 @@ function parsePath(path) {
   if (hasQuery || hashIndex > -1) {
     return {
       pathname: path.substring(0, hasQuery ? queryIndex : hashIndex),
-      query: hasQuery ? path.substring(queryIndex, hashIndex > -1 ? hashIndex : void 0) : "",
+      query: hasQuery
+        ? path.substring(queryIndex, hashIndex > -1 ? hashIndex : void 0)
+        : "",
       hash: hashIndex > -1 ? path.slice(hashIndex) : "",
     };
   }
@@ -468,7 +481,9 @@ function addPathPrefix(path, prefix) {
 }
 function getAnchorProperty(a, key) {
   if (typeof key === "string" && key === "data-disable-progress") {
-    const dataKey = key.substring(5).replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+    const dataKey = key
+      .substring(5)
+      .replace(/-([a-z])/g, (_, c) => c.toUpperCase());
     return a.dataset[dataKey];
   }
   const prop = a[key];

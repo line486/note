@@ -10,102 +10,102 @@
 
 - 可通过 `WinGet` 安装。
 
-    ```bash
-    winget install RubyMetric.chsrc
-    ```
+  ```bash
+  winget install RubyMetric.chsrc
+  ```
 
 - 可通过 `PowerShell` 脚本一键下载最新版二进制文件。
 
-    若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.ps1` 替代
+  若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.ps1` 替代
 
-    ```PowerShell
-    "& { $(iwr -useb https://chsrc.run/windows) } -Version pre" | iex
-    ```
+  ```PowerShell
+  "& { $(iwr -useb https://chsrc.run/windows) } -Version pre" | iex
+  ```
 
 - 或手动下载二进制文件，这是最新版，往往比 `scoop` 提供的更新，适用于修复 Bug、添加新功能后及时使用，以及未安装 `scoop` 时
 
-    ```bash
-    # x64
-    curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-windows.exe -o chsrc.exe
+  ```bash
+  # x64
+  curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-windows.exe -o chsrc.exe
 
-    # x86
-    curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x86-windows.exe -o chsrc.exe
-    ```
+  # x86
+  curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x86-windows.exe -o chsrc.exe
+  ```
 
 ### Linux
 
 - 支持 `AUR`，可通过 `yay` 安装。
 
-    ```bash
-    # AUR
-    $ yay -S chsrc-bin # Binary from GitHub Release
-    $ yay -S chsrc-git # Build  from the latest main branch (stable)
-    $ yay -S chsrc     # Build  from GitHub Release
-    ```
+  ```bash
+  # AUR
+  $ yay -S chsrc-bin # Binary from GitHub Release
+  $ yay -S chsrc-git # Build  from the latest main branch (stable)
+  $ yay -S chsrc     # Build  from GitHub Release
+  ```
 
 - 可通过 `shell` 脚本一键安装最新版，感谢 [@Efterklang] 与 [@wickdynex]
 
-    若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.sh` 替代
+  若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.sh` 替代
 
-    ```bash
-    # 非root用户默认安装至 ~/.local/bin
-    $ curl https://chsrc.run/posix | bash
+  ```bash
+  # 非root用户默认安装至 ~/.local/bin
+  $ curl https://chsrc.run/posix | bash
 
-    # root用户默认安装至 /usr/local/bin
-    $ curl https://chsrc.run/posix | sudo bash
+  # root用户默认安装至 /usr/local/bin
+  $ curl https://chsrc.run/posix | sudo bash
 
-    # 使用 -d 指定目录安装
-    $ curl https://chsrc.run/posix | bash -s -- -d ./
-    ```
+  # 使用 -d 指定目录安装
+  $ curl https://chsrc.run/posix | bash -s -- -d ./
+  ```
 
 - 可手动下载二进制文件安装
 
-    ```bash
-    # x64
-    curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-linux -o chsrc; chmod +x ./chsrc
+  ```bash
+  # x64
+  curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-linux -o chsrc; chmod +x ./chsrc
 
-    # aarch64
-    curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-aarch64-linux -o chsrc; chmod +x ./chsrc
+  # aarch64
+  curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-aarch64-linux -o chsrc; chmod +x ./chsrc
 
-    # riscv64
-    curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-riscv64-linux -o chsrc; chmod +x ./chsrc
+  # riscv64
+  curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-riscv64-linux -o chsrc; chmod +x ./chsrc
 
-    # armv7
-    curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-armv7-linux -o chsrc; chmod +x ./chsrc
-    ```
+  # armv7
+  curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-armv7-linux -o chsrc; chmod +x ./chsrc
+  ```
 
 ### macOS
 
 - 可通过 `homebrew` 安装。
 
-    ```bash
-    brew install chsrc
-    ```
+  ```bash
+  brew install chsrc
+  ```
 
 - 可通过 `shell` 脚本安装最新版，感谢 [@Efterklang] 与 [@wickdynex]
 
-    若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.sh` 替代
+  若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.sh` 替代
 
-    ```bash
-    # 非root用户默认安装至 ~/.local/bin
-    $ curl https://chsrc.run/posix | bash
+  ```bash
+  # 非root用户默认安装至 ~/.local/bin
+  $ curl https://chsrc.run/posix | bash
 
-    # root用户默认安装至 /usr/local/bin
-    $ curl https://chsrc.run/posix | sudo bash
+  # root用户默认安装至 /usr/local/bin
+  $ curl https://chsrc.run/posix | sudo bash
 
-    # 使用 -d 指定目录安装
-    $ curl https://chsrc.run/posix | bash -s -- -d ./
-    ```
+  # 使用 -d 指定目录安装
+  $ curl https://chsrc.run/posix | bash -s -- -d ./
+  ```
 
 - 或手动下载二进制文件，这是最新版，往往比 `homebrew` 提供的更新，适用于修复 Bug、添加新功能后及时使用
 
-    ```bash
-    # arm64/aarch64
-    curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-aarch64-macos -o chsrc; chmod +x ./chsrc
+  ```bash
+  # arm64/aarch64
+  curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-aarch64-macos -o chsrc; chmod +x ./chsrc
 
-    # x64
-    curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-macos -o chsrc; chmod +x ./chsrc
-    ```
+  # x64
+  curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-macos -o chsrc; chmod +x ./chsrc
+  ```
 
 ## 💡 使用
 

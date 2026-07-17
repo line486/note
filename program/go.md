@@ -748,12 +748,12 @@ Golang Array 和以往认知的数组有很大不同：
 
 4. 数组可以通过下标进行访问，下标是从0开始，最后一个元素下标是：`len-1`
 
-    ```go
-    for i := 0; i < len(a); i++ {
-    }
-    for index, v := range a {
-    }
-    ```
+   ```go
+   for i := 0; i < len(a); i++ {
+   }
+   for index, v := range a {
+   }
+   ```
 
 5. 访问越界，如果下标在数组合法范围之外，则触发访问越界，会 `panic`。
 6. 数组是值类型，赋值和传参会复制整个数组，而不是指针。因此改变副本的值，不会改变本身的值。
@@ -2877,49 +2877,49 @@ func main() {
 
 1. 值传递：指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到实际参数。
 
-    ```go
-    func swap(x, y int) int {
-       ... ...
-    }
-    ```
+   ```go
+   func swap(x, y int) int {
+      ... ...
+   }
+   ```
 
 2. 引用传递：是指在调用函数时将实际参数的地址传递到函数中，那么在函数中对参数所进行的修改，将影响到实际参数。
 
-    ```go
-    package main
+   ```go
+   package main
 
-    import (
-        "fmt"
-    )
+   import (
+       "fmt"
+   )
 
-    /* 定义相互交换值的函数 */
-    func swap(x, y *int) {
-        var temp int
+   /* 定义相互交换值的函数 */
+   func swap(x, y *int) {
+       var temp int
 
-        temp = *x /* 保存 x 的值 */
-        *x = *y   /* 将 y 值赋给 x */
-        *y = temp /* 将 temp 值赋给 y*/
+       temp = *x /* 保存 x 的值 */
+       *x = *y   /* 将 y 值赋给 x */
+       *y = temp /* 将 temp 值赋给 y*/
 
-    }
+   }
 
-    func main() {
-        var a, b int = 1, 2
-        /*
-            调用 swap() 函数
-            &a 指向 a 指针，a 变量的地址
-            &b 指向 b 指针，b 变量的地址
-        */
-        swap(&a, &b)
+   func main() {
+       var a, b int = 1, 2
+       /*
+           调用 swap() 函数
+           &a 指向 a 指针，a 变量的地址
+           &b 指向 b 指针，b 变量的地址
+       */
+       swap(&a, &b)
 
-        fmt.Println(a, b)
-    }
-    ```
+       fmt.Println(a, b)
+   }
+   ```
 
-    输出结果：
+   输出结果：
 
-    ```
-    2 1
-    ```
+   ```
+   2 1
+   ```
 
 在默认情况下，Go 语言使用的是值传递，即在调用过程中不会影响到实际参数。
 
@@ -3927,8 +3927,8 @@ Golang 没有结构化异常，使用 `panic` 抛出错误，`recover` 捕获错
 1. 内置函数
 2. 用来控制一个 `goroutine` 的 `panicking` 行为，捕获 `panic`，从而影响应用的行为
 3. 一般的调用建议：
-    1. 在 `defer` 函数中，通过 `recever` 来终止一个 `goroutine` 的 `panicking` 过程，从而恢复正常代码的执行
-    2. 可以获取通过 `panic` 传递的 `error`
+   1. 在 `defer` 函数中，通过 `recever` 来终止一个 `goroutine` 的 `panicking` 过程，从而恢复正常代码的执行
+   2. 可以获取通过 `panic` 传递的 `error`
 
 > [!WARNING]
 >

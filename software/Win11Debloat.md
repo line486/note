@@ -16,9 +16,9 @@
 
 2. 将以下命令复制并粘贴到PowerShell中：
 
-    ```sh
-    & ([scriptblock]::Create((irm "https://fs.bnm3.cn/share/Win11Debloat/Get.ps1")))
-    ```
+   ```sh
+   & ([scriptblock]::Create((irm "https://fs.bnm3.cn/share/Win11Debloat/Get.ps1")))
+   ```
 
 3. 等待脚本自动下载Win11Debloat。
 

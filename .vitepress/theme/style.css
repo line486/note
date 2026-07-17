@@ -1,11 +1,11 @@
 /* Front */
 @font-face {
-    font-family: JetBrains Mono;
-    src: url("./fonts/JetBrainsMono.woff2") format("woff2");
+  font-family: JetBrains Mono;
+  src: url("./fonts/JetBrainsMono.woff2") format("woff2");
 }
 
 img {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 /**
@@ -13,27 +13,27 @@ img {
  * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-font-family-mono:
-        "JetBrains Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
-        monospace, var(--vp-font-family-base);
+  --vp-font-family-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace, var(--vp-font-family-base);
 }
 
 /**
  * Component: medium-zoom
  * -------------------------------------------------------------------------- */
 .medium-zoom-overlay {
-    z-index: 30;
+  z-index: 30;
 }
 
 .medium-zoom-image {
-    z-index: 9999 !important;
+  z-index: 9999 !important;
 }
 
 /**
  * Component: bprogress
  * -------------------------------------------------------------------------- */
 .bprogress {
-    --bprogress-color: var(--vp-c-brand-1);
-    --bprogress-box-shadow: none;
-    position: fixed !important;
+  --bprogress-color: var(--vp-c-brand-1);
+  --bprogress-box-shadow: none;
+  position: fixed !important;
 }

@@ -45,15 +45,15 @@ Job 生成的文件（如编译结果、日志、报告），可传递给后续 
 1. 在项目根目录创建 `.gitlab-ci.yml` 文件。
 2. 添加以下内容：
 
-    ```yaml
-    stages:
-        - test
+   ```yaml
+   stages:
+     - test
 
-    hello_world:
-        stage: test
-        script:
-            - echo "Hello, GitLab CI!"
-    ```
+   hello_world:
+     stage: test
+     script:
+       - echo "Hello, GitLab CI!"
+   ```
 
 3. 提交并推送到 GitLab。
 4. 进入项目页面 → **CI/CD** → **Pipelines**，查看自动触发的流水线。
@@ -64,19 +64,19 @@ Job 生成的文件（如编译结果、日志、报告），可传递给后续 
 
 ```yaml
 stages:
-    - build
-    - test
-    - deploy
+  - build
+  - test
+  - deploy
 
 job_name:
-    stage: test
-    script:
-        - echo "Running tests"
-        - npm test
-    tags:
-        - docker
-    only:
-        - main
+  stage: test
+  script:
+    - echo "Running tests"
+    - npm test
+  tags:
+    - docker
+  only:
+    - main
 ```
 
 ## 触发条件（Rules / Only / Except）
@@ -87,10 +87,10 @@ job_name:
 
 ```yaml
 build_job:
-    script: npm run build
-    rules:
-        - if: '$CI_COMMIT_BRANCH == "main"'
-        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  script: npm run build
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
 ```
 
 常见变量：
@@ -103,50 +103,50 @@ build_job:
 
 ```yaml
 deploy_prod:
-    stage: deploy
-    script: ./deploy.sh
-    rules:
-        - if: '$CI_COMMIT_BRANCH == "main"'
-        - if: "$CI_COMMIT_TAG != null"
+  stage: deploy
+  script: ./deploy.sh
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: "$CI_COMMIT_TAG != null"
 ```
 
 ## 多 Job 与 Stage 依赖
 
 ```yaml
 stages:
-    - build
-    - test
-    - deploy
+  - build
+  - test
+  - deploy
 
 build_app:
-    stage: build
-    script: npm run build
-    artifacts:
-        paths:
-            - dist/
+  stage: build
+  script: npm run build
+  artifacts:
+    paths:
+      - dist/
 
 unit_test:
-    stage: test
-    script: npm test
+  stage: test
+  script: npm test
 
 e2e_test:
-    stage: test
-    script: npm run e2e
+  stage: test
+  script: npm run e2e
 
 deploy_staging:
-    stage: deploy
-    script: scp -r dist/ user@staging:/app
-    environment:
-        name: staging
-    only:
-        - develop
+  stage: deploy
+  script: scp -r dist/ user@staging:/app
+  environment:
+    name: staging
+  only:
+    - develop
 
 deploy_prod:
-    stage: deploy
-    script: kubectl apply -f k8s/
-    environment:
-        name: production
-    when: manual
+  stage: deploy
+  script: kubectl apply -f k8s/
+  environment:
+    name: production
+  when: manual
 ```
 
 `when: manual` 表示该 Job 需要人工点击才能执行（常用于生产部署）。
@@ -157,12 +157,12 @@ deploy_prod:
 
 ```yaml
 build:
-    script: npm run build
-    artifacts:
-        paths:
-            - dist/
-            - coverage/
-        expire_in: 1 week
+  script: npm run build
+  artifacts:
+    paths:
+      - dist/
+      - coverage/
+    expire_in: 1 week
 ```
 
 下游 Job 自动下载上游 artifacts（同一 Pipeline 内）。
@@ -173,13 +173,13 @@ build:
 
 ```yaml
 cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-        - node_modules/
-        - .npm/
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
 
 install_deps:
-    script: npm ci
+  script: npm ci
 ```
 
 `key` 决定缓存隔离粒度。`${CI_COMMIT_REF_SLUG}` 表示按分支/标签缓存。跨 Job 共享缓存需显式声明（默认所有 Job 共享全局 cache）。
@@ -194,7 +194,7 @@ install_deps:
 
 ```yaml
 script:
-    - echo "API Key is $API_KEY"
+  - echo "API Key is $API_KEY"
 ```
 
 敏感变量建议勾选 **Masked**（隐藏日志）和 **Protected**（仅保护分支可用）。
@@ -205,15 +205,15 @@ script:
 
 ```yaml
 test_with_db:
-    services:
-        - name: postgres:13
-          alias: db
-    variables:
-        POSTGRES_DB: testdb
-        POSTGRES_USER: runner
-        POSTGRES_PASSWORD: ""
-    script:
-        - psql -h db -U runner -d testdb -c "SELECT 1;"
+  services:
+    - name: postgres:13
+      alias: db
+  variables:
+    POSTGRES_DB: testdb
+    POSTGRES_USER: runner
+    POSTGRES_PASSWORD: ""
+  script:
+    - psql -h db -U runner -d testdb -c "SELECT 1;"
 ```
 
 ## Include 与模板复用
@@ -224,20 +224,20 @@ test_with_db:
 
 ```yaml
 .node_base:
-    image: node:18
-    before_script:
-        - npm ci
+  image: node:18
+  before_script:
+    - npm ci
 ```
 
 ### 主配置引用
 
 ```yaml
 include:
-    - local: "/.gitlab/ci/templates/node.yml"
+  - local: "/.gitlab/ci/templates/node.yml"
 
 test:
-    extends: .node_base
-    script: npm test
+  extends: .node_base
+  script: npm test
 ```
 
 支持 `local`（本仓库）、`project`（其他项目）、`remote`（URL）等方式引入。
@@ -272,62 +272,62 @@ test:
 image: node:18
 
 stages:
-    - install
-    - test
-    - build
-    - deploy
+  - install
+  - test
+  - build
+  - deploy
 
 variables:
-    NODE_ENV: production
+  NODE_ENV: production
 
 cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-        - .npm/
-        - node_modules/
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm/
+    - node_modules/
 
 install_deps:
-    stage: install
-    script:
-        - npm ci --cache .npm --prefer-offline
-    artifacts:
-        paths:
-            - node_modules/
-        expire_in: 1 hour
+  stage: install
+  script:
+    - npm ci --cache .npm --prefer-offline
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1 hour
 
 unit_tests:
-    stage: test
-    script:
-        - npm run test:unit
-    coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  stage: test
+  script:
+    - npm run test:unit
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
 
 build_app:
-    stage: build
-    script:
-        - npm run build
-    artifacts:
-        paths:
-            - dist/
-        expire_in: 1 week
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 week
 
 deploy_staging:
-    stage: deploy
-    script:
-        - echo "Deploying to staging server..."
-        - rsync -avz dist/ user@staging:/var/www/app
-    environment:
-        name: staging
-    only:
-        - develop
+  stage: deploy
+  script:
+    - echo "Deploying to staging server..."
+    - rsync -avz dist/ user@staging:/var/www/app
+  environment:
+    name: staging
+  only:
+    - develop
 
 deploy_prod:
-    stage: deploy
-    script:
-        - echo "Deploying to production..."
-        - aws s3 sync dist/ s3://my-prod-bucket
-    environment:
-        name: production
-    when: manual
-    only:
-        - main
+  stage: deploy
+  script:
+    - echo "Deploying to production..."
+    - aws s3 sync dist/ s3://my-prod-bucket
+  environment:
+    name: production
+  when: manual
+  only:
+    - main
 ```

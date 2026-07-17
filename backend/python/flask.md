@@ -339,8 +339,8 @@ get_flashed_messages(with_categories, category_filter)
 以下闪现模板中收到消息。
 
 ```html
-{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %} {{
-message }} {% endfor %} {% endif %} {% endwith %}
+{% with messages = get_flashed_messages() %} {% if messages %} {% for message in
+messages %} {{ message }} {% endfor %} {% endif %} {% endwith %}
 ```
 
 ## 文件上传

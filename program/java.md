@@ -92,8 +92,8 @@ myCar.start();
 
 - **Error**：系统级错误，如 `OutOfMemoryError`。
 - **Exception**：
-    - **Checked Exception**：编译期检查，如 `IOException`。
-    - **Unchecked Exception**：运行时异常，如 `NullPointerException`。
+  - **Checked Exception**：编译期检查，如 `IOException`。
+  - **Unchecked Exception**：运行时异常，如 `NullPointerException`。
 
 ### 3.2 异常处理结构
 
@@ -141,9 +141,9 @@ class InvalidAgeException extends Exception {
 ### 5.1 主要接口
 
 - `Collection`：根接口
-    - `List`：有序、可重复（如 `ArrayList`, `LinkedList`）
-    - `Set`：无序、不重复（如 `HashSet`, `TreeSet`）
-    - `Queue`：队列
+  - `List`：有序、可重复（如 `ArrayList`, `LinkedList`）
+  - `Set`：无序、不重复（如 `HashSet`, `TreeSet`）
+  - `Queue`：队列
 - `Map`：键值对（如 `HashMap`, `TreeMap`, `LinkedHashMap`）
 
 ### 5.2 常见实现类特点

@@ -9,16 +9,16 @@
 ```vue
 <script>
 export default {
-    data() {
-        return {
-            count: 0,
-        };
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  methods: {
+    addCount() {
+      this.count++;
     },
-    methods: {
-        addCount() {
-            this.count++;
-        },
-    },
+  },
 };
 </script>
 ```
@@ -67,8 +67,8 @@ npm create vue@latest
 ```vue
 <script>
 export default {
-    setup() {},
-    beforeCreate() {},
+  setup() {},
+  beforeCreate() {},
 };
 </script>
 ```
@@ -86,17 +86,17 @@ export default {
 ```vue
 <script>
 export default {
-    setup() {
-        const message = "this is message";
-        const logMessage = () => {
-            console.log(message);
-        };
-        // 必须return才可以
-        return {
-            message,
-            logMessage,
-        };
-    },
+  setup() {
+    const message = "this is message";
+    const logMessage = () => {
+      console.log(message);
+    };
+    // 必须return才可以
+    return {
+      message,
+      logMessage,
+    };
+  },
 };
 </script>
 ```
@@ -109,7 +109,7 @@ export default {
 <script setup>
 const message = "this is message";
 const logMessage = () => {
-    console.log(message);
+  console.log(message);
 };
 </script>
 ```
@@ -126,17 +126,17 @@ const logMessage = () => {
 import { reactive } from "vue";
 // 执行函数 传入参数 变量接收
 const state = reactive({
-    msg: "this is msg",
+  msg: "this is msg",
 });
 const setSate = () => {
-    // 修改数据更新视图
-    state.msg = "this is new msg";
+  // 修改数据更新视图
+  state.msg = "this is new msg";
 };
 </script>
 
 <template>
-    {{ state.msg }}
-    <button @click="setState">change msg</button>
+  {{ state.msg }}
+  <button @click="setState">change msg</button>
 </template>
 ```
 
@@ -151,13 +151,13 @@ import { ref } from "vue";
 // 执行函数 传入参数 变量接收
 const count = ref(0);
 const setCount = () => {
-    // 修改数据更新视图必须加上.value
-    count.value++;
+  // 修改数据更新视图必须加上.value
+  count.value++;
 };
 </script>
 
 <template>
-    <button @click="setCount">{{ count }}</button>
+  <button @click="setCount">{{ count }}</button>
 </template>
 ```
 
@@ -165,12 +165,12 @@ const setCount = () => {
 
 1. 都是用来生成响应式数据
 2. 不同点
-    - `reactive` 不能处理简单类型的数据
-    - `ref` 参数类型支持更好，但是必须通过 `.value` 做访问修改
-    - `ref` 函数内部的实现依赖于 `reactive` 函数
+   - `reactive` 不能处理简单类型的数据
+   - `ref` 参数类型支持更好，但是必须通过 `.value` 做访问修改
+   - `ref` 函数内部的实现依赖于 `reactive` 函数
 
 3. 在实际工作中的推荐
-    - 推荐使用 `ref` 函数，减少记忆负担。
+   - 推荐使用 `ref` 函数，减少记忆负担。
 
 ## computed
 
@@ -203,7 +203,7 @@ import { ref, watch } from "vue";
 const count = ref(0);
 // 2. 调用watch 侦听变化
 watch(count, (newValue, oldValue) => {
-    console.log(`count发生了变化，老值为${oldValue},新值为${newValue}`);
+  console.log(`count发生了变化，老值为${oldValue},新值为${newValue}`);
 });
 </script>
 ```
@@ -236,13 +236,13 @@ import { ref, watch } from "vue";
 const count = ref(0);
 // 2. 调用watch 侦听变化
 watch(
-    count,
-    (newValue, oldValue) => {
-        console.log(`count发生了变化，老值为${oldValue},新值为${newValue}`);
-    },
-    {
-        immediate: true,
-    }
+  count,
+  (newValue, oldValue) => {
+    console.log(`count发生了变化，老值为${oldValue},新值为${newValue}`);
+  },
+  {
+    immediate: true,
+  },
 );
 </script>
 ```
@@ -258,11 +258,11 @@ import { ref, watch } from "vue";
 const state = ref({ count: 0 });
 // 2. 监听对象state
 watch(state, () => {
-    console.log("数据变化了");
+  console.log("数据变化了");
 });
 const changeStateByCount = () => {
-    // 直接修改不会引发回调执行
-    state.value.count++;
+  // 直接修改不会引发回调执行
+  state.value.count++;
 };
 </script>
 
@@ -272,15 +272,15 @@ import { ref, watch } from "vue";
 const state = ref({ count: 0 });
 // 2. 监听对象state 并开启deep
 watch(
-    state,
-    () => {
-        console.log("数据变化了");
-    },
-    { deep: true }
+  state,
+  () => {
+    console.log("数据变化了");
+  },
+  { deep: true },
 );
 const changeStateByCount = () => {
-    // 此时修改可以触发回调
-    state.value.count++;
+  // 此时修改可以触发回调
+  state.value.count++;
 };
 </script>
 ```
@@ -308,7 +308,7 @@ const changeStateByCount = () => {
 <script setup>
 import { onMounted } from "vue";
 onMounted(() => {
-    // 自定义逻辑
+  // 自定义逻辑
 });
 </script>
 ```
@@ -321,11 +321,11 @@ onMounted(() => {
 <script setup>
 import { onMounted } from "vue";
 onMounted(() => {
-    // 自定义逻辑
+  // 自定义逻辑
 });
 
 onMounted(() => {
-    // 自定义逻辑
+  // 自定义逻辑
 });
 </script>
 ```
@@ -346,8 +346,8 @@ import sonComVue from "./son-com.vue";
 </script>
 
 <template>
-    <!--1.绑定属性 message -->
-    <sonComVue message="this is app message" />
+  <!--1.绑定属性 message -->
+  <sonComVue message="this is app message" />
 </template>
 ```
 
@@ -357,12 +357,12 @@ import sonComVue from "./son-com.vue";
 <script setup>
 //2.通过defineProps“编译器宏”接收子组件传递的数据
 const props = defineProps({
-    message: String,
+  message: String,
 });
 </script>
 
 <template>
-    {{ message }}
+  {{ message }}
 </template>
 ```
 
@@ -383,8 +383,8 @@ const getMessage = (msg) =>{
 </script>
 
 <template>
-    <!-- 1．绑定自定义事件 -->
-    <sonComVue @get-message="getMessage" />
+  <!-- 1．绑定自定义事件 -->
+  <sonComVue @get-message="getMessage" />
 </template>
 ```
 
@@ -395,13 +395,13 @@ const getMessage = (msg) =>{
 // 2.通过defineEmits编译器宏生成emit方法
 const emit = defineEmits(["get-message"]);
 const sendMsg = () => {
-    // 3.触发自定义事件并传递参数
-    emit("get-message", "this is son msg");
+  // 3.触发自定义事件并传递参数
+  emit("get-message", "this is son msg");
 };
 </script>
 
 <template>
-    <button @click="sendMsg">sendMsg</button>
+  <button @click="sendMsg">sendMsg</button>
 </template>
 ```
 
@@ -424,8 +424,8 @@ const h1Ref = ref(null);
 </script>
 
 <template>
-    <!-- 2． 通过ref标识绑定ref对象 -->
-    <h1 ref="h1Ref">我是dom标签h1</h1>
+  <!-- 2． 通过ref标识绑定ref对象 -->
+  <h1 ref="h1Ref">我是dom标签h1</h1>
 </template>
 ```
 
@@ -439,7 +439,7 @@ const h1Ref = ref(null);
 import { ref } from "vue";
 const testMessage = ref("this is test msg");
 defineExpose({
-    testMessage,
+  testMessage,
 });
 </script>
 ```
@@ -497,7 +497,7 @@ const message = inject("key");
 
 ```js
 const setCount = () => {
-    count.value++;
+  count.value++;
 };
 
 provide("setCount-key", setCount);
@@ -522,9 +522,9 @@ const setCount = inject("setCount-key");
 ```vue
 <script setup>
 defineoptions({
-    name: "Foo",
-    inheritAttrs: false,
-    // ..．更多自定义属性
+  name: "Foo",
+  inheritAttrs: false,
+  // ..．更多自定义属性
 });
 </script>
 ```
@@ -560,18 +560,18 @@ import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [
-        vue({
-            script: {
-                defineModel: true,
-            },
-        }),
-    ],
-    resolve: {
-        alias: {
-            "@": fileURLToPath(new URL("./src", import.meta.url)),
-        },
+  plugins: [
+    vue({
+      script: {
+        defineModel: true,
+      },
+    }),
+  ],
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
+  },
 });
 ```
 
@@ -606,13 +606,13 @@ import { ref, computed } from "vue";
 import { defineStore } from "pinia";
 
 export const useCounterStore = defineStore("counter", () => {
-    const count = ref(0);
-    const doubleCount = computed(() => count.value * 2);
-    function increment() {
-        count.value++;
-    }
+  const count = ref(0);
+  const doubleCount = computed(() => count.value * 2);
+  function increment() {
+    count.value++;
+  }
 
-    return { count, doubleCount, increment };
+  return { count, doubleCount, increment };
 });
 ```
 
@@ -627,9 +627,9 @@ const counterStore = useCounterStore();
 </script>
 
 <template>
-    <button @click="counterStore.increment">
-        {{ counterStore.count }}
-    </button>
+  <button @click="counterStore.increment">
+    {{ counterStore.count }}
+  </button>
 </template>
 ```
 
@@ -657,7 +657,7 @@ const doubleCount = computed(() => count.value * 2);
 ```js
 // 异步action
 const getList = async () => {
-    const res = (await axios.request) < 接口数据类型 > {};
+  const res = (await axios.request) < 接口数据类型 > {};
 };
 ```
 
@@ -686,38 +686,38 @@ const { count, doubleCount } = storeToRefs(counterStore);
 
 1. 安装插件 `pinia-plugin-persistedstate`
 
-    ```shell
-    npm add pinia-plugin-persistedstate
-    ```
+   ```shell
+   npm add pinia-plugin-persistedstate
+   ```
 
 2. 使用 `main.js`
 
-    ```js
-    import persist from "pinia-plugin-persistedstate";
-    // ...
-    app.use(createPinia().use(persist));
-    ```
+   ```js
+   import persist from "pinia-plugin-persistedstate";
+   // ...
+   app.use(createPinia().use(persist));
+   ```
 
 3. 配置 `store/counter.js`
 
-    ```js
-    import { defineStore } from "pinia";
-    import { computed, ref } from "vue";
+   ```js
+   import { defineStore } from "pinia";
+   import { computed, ref } from "vue";
 
-    export const useCounterStore = defineStore(
-        "counter",
-        () => {
-            // ...
-            return {
-                count,
-                doubleCount,
-                increment,
-            };
-        },
-        {
-            persist: true,
-        }
-    );
-    ```
+   export const useCounterStore = defineStore(
+     "counter",
+     () => {
+       // ...
+       return {
+         count,
+         doubleCount,
+         increment,
+       };
+     },
+     {
+       persist: true,
+     },
+   );
+   ```
 
 4. 其他配置，看官网文档即可

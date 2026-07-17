@@ -17,101 +17,101 @@ C 语言中，数据类型可以说是语言的基石，它们决定了变量在
 
 - **整型（int）**：存储整数。  
   示例：
-    ```c
-    int a = 10;
-    int b = -20;
-    ```
+  ```c
+  int a = 10;
+  int b = -20;
+  ```
 - **浮点型（float、double）**：分别存储单精度和双精度浮点数。  
   示例：
-    ```c
-    float pi_f = 3.14f;
-    double pi_d = 3.141592653589793;
-    ```
+  ```c
+  float pi_f = 3.14f;
+  double pi_d = 3.141592653589793;
+  ```
 - **字符型（char）**：通常占 1 字节，用于存储单个字符。  
   示例：
-    ```c
-    char ch = 'A';
-    ```
+  ```c
+  char ch = 'A';
+  ```
 - **布尔型（\_Bool 或通过 stdbool.h 的 bool）**：存储逻辑值。  
   示例：
-    ```c
-    #include <stdbool.h>
-    bool flag = true;
-    ```
+  ```c
+  #include <stdbool.h>
+  bool flag = true;
+  ```
 
 ### 2. 派生数据类型
 
 - **数组**：同一类型元素的集合，内存中连续存储。  
   示例：
-    ```c
-    int arr[5] = {1, 2, 3, 4, 5};
-    ```
+  ```c
+  int arr[5] = {1, 2, 3, 4, 5};
+  ```
 - **指针**：存储变量地址的变量，可实现动态内存管理与数据传递。  
   示例：
-    ```c
-    int x = 100;
-    int *p = &x;  // p 存储 x 的地址
-    ```
+  ```c
+  int x = 100;
+  int *p = &x;  // p 存储 x 的地址
+  ```
 - **结构体（struct）**：将不同类型的数据组合在一起，形成新的复合数据类型。  
   示例：
-    ```c
-    struct Person {
-        char name[50];
-        int age;
-    };
-    struct Person p1 = {"张三", 30};
-    ```
+  ```c
+  struct Person {
+      char name[50];
+      int age;
+  };
+  struct Person p1 = {"张三", 30};
+  ```
 - **联合体（union）**：多个成员共用同一内存区域，只能同时存储其中一个数据。  
   示例：
-    ```c
-    union Data {
-        int i;
-        float f;
-        char str[20];
-    };
-    union Data data;
-    data.i = 10;
-    ```
+  ```c
+  union Data {
+      int i;
+      float f;
+      char str[20];
+  };
+  union Data data;
+  data.i = 10;
+  ```
 - **枚举（enum）**：为一组具名整数常量赋予名称，提高代码可读性。  
   示例：
-    ```c
-    enum Weekday { MON, TUE, WED, THU, FRI, SAT, SUN };
-    enum Weekday today = WED;
-    ```
+  ```c
+  enum Weekday { MON, TUE, WED, THU, FRI, SAT, SUN };
+  enum Weekday today = WED;
+  ```
 
 ## 三、运算符与表达式
 
 C 语言中的运算符种类繁多，能够完成算术、逻辑、位运算等多种任务。
 
 - **算术运算符**：`+`、`-`、`*`、`/`、`%`；例如：
-    ```c
-    int sum = 10 + 20;
-    int mod = 20 % 3;
-    ```
+  ```c
+  int sum = 10 + 20;
+  int mod = 20 % 3;
+  ```
 - **关系运算符**：如 `==`、`!=`、`>`、`<` 等，用于比较数值。
-    ```c
-    if (a != b) {
-        // 条件成立时执行的代码
-    }
-    ```
+  ```c
+  if (a != b) {
+      // 条件成立时执行的代码
+  }
+  ```
 - **逻辑运算符**：`&&`、`||`、`!`，用于构造复合条件判断。  
   示例：
-    ```c
-    if ((a > 0) && (b > 0)) {
-        // 当 a 和 b 均大于零时执行
-    }
-    ```
+  ```c
+  if ((a > 0) && (b > 0)) {
+      // 当 a 和 b 均大于零时执行
+  }
+  ```
 - **位运算符**：用于操作整数的二进制表示，如 `&`、`|`、`^`、`<<`、`>>`。  
   示例：
-    ```c
-    int bits = 5 << 1;  // 将 5 的二进制左移一位，相当于乘以 2
-    ```
+  ```c
+  int bits = 5 << 1;  // 将 5 的二进制左移一位，相当于乘以 2
+  ```
 - **赋值运算符**：`=` 及其复合运算符如 `+=`、`-=` 等。  
   示例：
-    ```c
-    int num = 10;
-    num += 5;  // num 变为 15
-    ```
+  ```c
+  int num = 10;
+  num += 5;  // num 变为 15
+  ```
 
 ## 四、控制结构
 
@@ -121,60 +121,60 @@ C 语言中的运算符种类繁多，能够完成算术、逻辑、位运算等
 
 - **if-else 语句**：对条件表达式的真假进行判断，从而执行不同代码段。  
   示例：
-    ```c
-    int score = 85;
-    if (score >= 90) {
-        printf("优秀\n");
-    } else if (score >= 80) {
-        printf("良好\n");
-    } else {
-        printf("需要努力\n");
-    }
-    ```
+  ```c
+  int score = 85;
+  if (score >= 90) {
+      printf("优秀\n");
+  } else if (score >= 80) {
+      printf("良好\n");
+  } else {
+      printf("需要努力\n");
+  }
+  ```
 - **switch 语句**：适用于多分支选择，可以更清晰地表示多个条件判断。  
   示例：
-    ```c
-    int choice = 2;
-    switch (choice) {
-        case 1:
-            printf("选项 1\n");
-            break;
-        case 2:
-            printf("选项 2\n");
-            break;
-        default:
-            printf("其他选项\n");
-            break;
-    }
-    ```
+  ```c
+  int choice = 2;
+  switch (choice) {
+      case 1:
+          printf("选项 1\n");
+          break;
+      case 2:
+          printf("选项 2\n");
+          break;
+      default:
+          printf("其他选项\n");
+          break;
+  }
+  ```
 
 ### 2. 循环语句
 
 - **for 循环**：适用于循环次数已知的情况，结构紧凑。  
   示例：
-    ```c
-    for (int i = 0; i < 5; i++) {
-        printf("计数：%d\n", i);
-    }
-    ```
+  ```c
+  for (int i = 0; i < 5; i++) {
+      printf("计数：%d\n", i);
+  }
+  ```
 - **while 循环**：条件控制的循环，先判断后执行。  
   示例：
-    ```c
-    int count = 0;
-    while (count < 5) {
-        printf("计数：%d\n", count);
-        count++;
-    }
-    ```
+  ```c
+  int count = 0;
+  while (count < 5) {
+      printf("计数：%d\n", count);
+      count++;
+  }
+  ```
 - **do-while 循环**：先执行后判断，保证循环体至少执行一次。  
   示例：
-    ```c
-    int num = 0;
-    do {
-        printf("当前数字：%d\n", num);
-        num++;
-    } while (num < 5);
-    ```
+  ```c
+  int num = 0;
+  do {
+      printf("当前数字：%d\n", num);
+      num++;
+  } while (num < 5);
+  ```
 
 ## 五、函数与作用域
 
@@ -206,40 +206,40 @@ int main() {
 
 - **局部变量**：仅在声明它的函数或代码块内有效。  
   示例：
-    ```c
-    void func() {
-        int localVar = 100;
-        printf("局部变量：%d\n", localVar);
-    }
-    ```
+  ```c
+  void func() {
+      int localVar = 100;
+      printf("局部变量：%d\n", localVar);
+  }
+  ```
 - **全局变量**：在所有函数中均可访问，但滥用可能导致命名冲突。  
   示例：
 
-    ```c
-    int globalVar = 200;
+  ```c
+  int globalVar = 200;
 
-    void printGlobal() {
-        printf("全局变量：%d\n", globalVar);
-    }
-    ```
+  void printGlobal() {
+      printf("全局变量：%d\n", globalVar);
+  }
+  ```
 
 - **静态变量**：局部静态变量保留其值，全局静态变量仅限当前文件可见。  
   示例：
-    ```c
-    void countCalls() {
-        static int callCount = 0;
-        callCount++;
-        printf("调用次数：%d\n", callCount);
-    }
-    ```
+  ```c
+  void countCalls() {
+      static int callCount = 0;
+      callCount++;
+      printf("调用次数：%d\n", callCount);
+  }
+  ```
 - **寄存器变量**：建议存储在 CPU 寄存器中以加快访问速度，不过现代编译器优化使其作用有限。  
   示例：
-    ```c
-    void demo() {
-        register int fastVar = 10;
-        printf("寄存器变量：%d\n", fastVar);
-    }
-    ```
+  ```c
+  void demo() {
+      register int fastVar = 10;
+      printf("寄存器变量：%d\n", fastVar);
+  }
+  ```
 
 ## 六、指针与内存管理
 
@@ -354,25 +354,25 @@ int main() {
 
 - **宏定义**：`#define` 用于定义常量或宏函数。  
   示例：
-    ```c
-    #define PI 3.14159
-    #define SQUARE(x) ((x) * (x))
-    ```
+  ```c
+  #define PI 3.14159
+  #define SQUARE(x) ((x) * (x))
+  ```
 - **文件包含**：`#include` 将其他文件内容包含进当前文件，常用于包含标准库或自定义头文件。  
   示例：
-    ```c
-    #include <stdio.h>
-    #include "myheader.h"
-    ```
+  ```c
+  #include <stdio.h>
+  #include "myheader.h"
+  ```
 - **条件编译**：`#ifdef`、`#ifndef` 等用于根据条件编译代码，有助于跨平台开发。  
   示例：
-    ```c
-    #ifdef DEBUG
-    #define DEBUG_PRINT(x) printf("DEBUG: %s\n", x)
-    #else
-    #define DEBUG_PRINT(x)
-    #endif
-    ```
+  ```c
+  #ifdef DEBUG
+  #define DEBUG_PRINT(x) printf("DEBUG: %s\n", x)
+  #else
+  #define DEBUG_PRINT(x)
+  #endif
+  ```
 
 ## 九、深入实例解析
 

@@ -164,21 +164,21 @@ location [=|~|~*|^~] /uri/ { ... }
 
 - `root` 会拼接请求 URI：
 
-    ```nginx
-    location /test/ {
-        root /usr/share/nginx/html;
-    }
-    # 访问 /test/a.html -> /usr/share/nginx/html/test/a.html
-    ```
+  ```nginx
+  location /test/ {
+      root /usr/share/nginx/html;
+  }
+  # 访问 /test/a.html -> /usr/share/nginx/html/test/a.html
+  ```
 
 - `alias` 不会拼接 URI：
 
-    ```nginx
-    location /test/ {
-        alias /usr/share/nginx/html/static/;
-    }
-    # 访问 /test/a.html -> /usr/share/nginx/html/static/a.html
-    ```
+  ```nginx
+  location /test/ {
+      alias /usr/share/nginx/html/static/;
+  }
+  # 访问 /test/a.html -> /usr/share/nginx/html/static/a.html
+  ```
 
 ### 3. `last` 与 `break` 区别（在 location 内）
 
@@ -270,22 +270,22 @@ http {
 
 - **weight 权重**：根据权重分发
 
-    ```nginx
-    upstream myserver {
-        server 127.0.0.1:8081 weight=3;
-        server 127.0.0.1:8082 weight=1;
-    }
-    ```
+  ```nginx
+  upstream myserver {
+      server 127.0.0.1:8081 weight=3;
+      server 127.0.0.1:8082 weight=1;
+  }
+  ```
 
 - **ip_hash**：同一 IP 分配到同一服务器
 
-    ```nginx
-    upstream myserver {
-        ip_hash;
-        server 127.0.0.1:8081;
-        server 127.0.0.1:8082;
-    }
-    ```
+  ```nginx
+  upstream myserver {
+      ip_hash;
+      server 127.0.0.1:8081;
+      server 127.0.0.1:8082;
+  }
+  ```
 
 ## 八、内置变量参考表
 

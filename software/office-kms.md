@@ -51,24 +51,24 @@
 
 1. 安装
 
-    部署 - 添加产品 - 选择 `Visio LTSC 专业版2024-批量许可证`
+   部署 - 添加产品 - 选择 `Visio LTSC 专业版2024-批量许可证`
 
-    ![VisioLTSC2024.webp](assets/VisioLTSC2024.webp)
+   ![VisioLTSC2024.webp](assets/VisioLTSC2024.webp)
 
 2. 激活
 
-    激活 - 密钥管理 - 输入密钥 `B7TN8-FJ8V3-7QYCP-HQPMV-YY89G` - 安装密钥
+   激活 - 密钥管理 - 输入密钥 `B7TN8-FJ8V3-7QYCP-HQPMV-YY89G` - 安装密钥
 
-    ![installation-key.jpg](assets/installation-key.jpg)
+   ![installation-key.jpg](assets/installation-key.jpg)
 
-    然后，使用管理员身份运行 `cmd`，并执行以下命令
+   然后，使用管理员身份运行 `cmd`，并执行以下命令
 
-    ```cmd
-    cd "C:\Program Files\Microsoft Office\Office16"
-    cscript ospp.vbs /sethst:kms地址
-    cscript ospp.vbs /act
-    ```
+   ```cmd
+   cd "C:\Program Files\Microsoft Office\Office16"
+   cscript ospp.vbs /sethst:kms地址
+   cscript ospp.vbs /act
+   ```
 
-    > [!TIP]
-    >
-    > 如果你安装的是32位版本，那么启动命令第一个要改成：`cd "C:\Program Files (x86)\Microsoft Office\Office16"`
+   > [!TIP]
+   >
+   > 如果你安装的是32位版本，那么启动命令第一个要改成：`cd "C:\Program Files (x86)\Microsoft Office\Office16"`

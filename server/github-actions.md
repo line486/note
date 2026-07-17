@@ -49,21 +49,21 @@ GitHub Actions 是 GitHub 提供的持续集成与持续部署（CI/CD）服务�
 2. 在该文件夹中新建一个 YAML 文件，例如 `ci.yml`。
 3. 编写如下内容：
 
-    ```yaml
-    name: Hello World CI
+   ```yaml
+   name: Hello World CI
 
-    on: [push]
+   on: [push]
 
-    jobs:
-        build:
-            runs-on: ubuntu-latest
-            steps:
-                - name: Checkout code
-                  uses: actions/checkout@v4
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Checkout code
+           uses: actions/checkout@v4
 
-                - name: Say hello
-                  run: echo "Hello, GitHub Actions!"
-    ```
+         - name: Say hello
+           run: echo "Hello, GitHub Actions!"
+   ```
 
 4. 提交并推送到 GitHub。
 5. 进入仓库的 **Actions** 标签页，即可看到工作流被触发并执行。
@@ -72,29 +72,29 @@ GitHub Actions 是 GitHub 提供的持续集成与持续部署（CI/CD）服务�
 
 ```yaml
 on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
-    workflow_dispatch: # 允许手动触发
-    schedule:
-        - cron: "0 0 * * *" # 每天 UTC 0 点运行
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: # 允许手动触发
+  schedule:
+    - cron: "0 0 * * *" # 每天 UTC 0 点运行
 ```
 
 ## 多 Job 与依赖关系
 
 ```yaml
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo "Building..."
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building..."
 
-    test:
-        needs: build # 必须等 build 成功后才运行
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo "Testing..."
+  test:
+    needs: build # 必须等 build 成功后才运行
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing..."
 ```
 
 ## 使用环境变量
@@ -103,15 +103,15 @@ jobs:
 
 ```yaml
 env:
-    NODE_VERSION: 18
+  NODE_VERSION: 18
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        env:
-            API_KEY: ${{ secrets.API_KEY }} # 从 Secrets 读取
-        steps:
-            - run: echo "Node version is $NODE_VERSION"
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      API_KEY: ${{ secrets.API_KEY }} # 从 Secrets 读取
+    steps:
+      - run: echo "Node version is $NODE_VERSION"
 ```
 
 ### 使用 Secrets（密钥）
@@ -135,24 +135,24 @@ name: Node.js CI
 on: [push]
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: 18
-            - run: npm ci
-            - run: npm test
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm test
 ```
 
 ## 条件判断（if）
 
 ```yaml
 steps:
-    - name: Only on main branch
-      if: github.ref == 'refs/heads/main'
-      run: echo "Deploying to production"
+  - name: Only on main branch
+    if: github.ref == 'refs/heads/main'
+    run: echo "Deploying to production"
 ```
 
 ## 矩阵策略（Matrix Strategy）
@@ -161,19 +161,19 @@ steps:
 
 ```yaml
 jobs:
-    test:
-        strategy:
-            matrix:
-                os: [ubuntu-latest, windows-latest]
-                node: [16, 18, 20]
-        runs-on: ${{ matrix.os }}
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node }}
-            - run: npm ci
-            - run: npm test
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [16, 18, 20]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm test
 ```
 
 ## 构建产物（Artifacts）
@@ -183,12 +183,12 @@ jobs:
 ```yaml
 - uses: actions/upload-artifact@v4
   with:
-      name: coverage-report
-      path: coverage/
+    name: coverage-report
+    path: coverage/
 
 - uses: actions/download-artifact@v4
   with:
-      name: coverage-report
+    name: coverage-report
 ```
 
 ## 自定义 Action
@@ -205,14 +205,14 @@ jobs:
 name: "Say Hello"
 description: "Greet someone"
 inputs:
-    who-to-greet:
-        description: "Who to greet"
-        required: true
+  who-to-greet:
+    description: "Who to greet"
+    required: true
 runs:
-    using: composite
-    steps:
-        - run: echo "Hello ${{ inputs.who-to-greet }}!"
-          shell: bash
+  using: composite
+  steps:
+    - run: echo "Hello ${{ inputs.who-to-greet }}!"
+      shell: bash
 ```
 
 在主 Workflow 中调用：
@@ -220,7 +220,7 @@ runs:
 ```yaml
 - uses: ./.github/actions/hello
   with:
-      who-to-greet: "World"
+    who-to-greet: "World"
 ```
 
 ## 调试技巧
@@ -243,58 +243,58 @@ runs:
 name: Frontend CI/CD
 
 on:
-    push:
-        branches: [main]
+  push:
+    branches: [main]
 
 env:
-    NODE_VERSION: 18
+  NODE_VERSION: 18
 
 jobs:
-    lint-test-build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
+  lint-test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Setup Node
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ env.NODE_VERSION }}
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
-            - name: Cache dependencies
-              uses: actions/cache@v4
-              with:
-                  path: ~/.npm
-                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-            - name: Install dependencies
-              run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-            - name: Lint
-              run: npm run lint
+      - name: Lint
+        run: npm run lint
 
-            - name: Test
-              run: npm test
+      - name: Test
+        run: npm test
 
-            - name: Build
-              run: npm run build
+      - name: Build
+        run: npm run build
 
-            - name: Upload build artifact
-              uses: actions/upload-artifact@v4
-              with:
-                  name: dist
-                  path: dist/
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
 
-    deploy:
-        needs: lint-test-build
-        runs-on: ubuntu-latest
-        steps:
-            - name: Download build artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: ./dist
+  deploy:
+    needs: lint-test-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: ./dist
 
-            - name: Deploy to server
-              run: |
-                  echo "Deploy logic here (e.g., rsync, scp, or use a deployment action)"
+      - name: Deploy to server
+        run: |
+          echo "Deploy logic here (e.g., rsync, scp, or use a deployment action)"
 ```
