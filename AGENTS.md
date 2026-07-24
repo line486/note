@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Personal learning notes site built with **VitePress 2.0.0-alpha.17**, written in Chinese (zh-CN).
+Personal learning notes site built with **VitePress 2.0.0-alpha.18**, written in Chinese (zh-CN).
 
 ## Quick commands
 

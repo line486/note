@@ -5,22 +5,6 @@
 记录笔记和教程文档。
 **个人学习笔记，仅供本人参考，内容可能存在错误或侵权风险。**
 
-## 开发
-
-[bun](https://bun.com/) 安装依赖、编译、打包。
-
-```shell
-bun install
-```
-
-```shell
-bun run dev
-```
-
-```shell
-bun run build
-```
-
 ## 目录
 
 | 笔记                                   |
@@ -36,3 +20,19 @@ bun run build
 | [硬件与外设](/peripheral/README.md)    |
 | [设计与创作](/design/README.md)        |
 | [兴趣与收藏](/pastimes/README.md)      |
+
+## 开发
+
+[bun](https://bun.com/) 安装依赖、编译、打包。
+
+```shell
+bun install
+```
+
+```shell
+bun run dev
+```
+
+```shell
+bun run build
+```

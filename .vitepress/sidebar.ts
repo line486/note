@@ -64,27 +64,6 @@ export default [
     text: "后端开发",
     collapsed: true,
     items: [
-      {
-        text: "Go 后端",
-        collapsed: true,
-        items: [
-          { text: "Gin 框架", link: "/backend/go/gin.md" },
-          { text: "Kratos 微服务", link: "/backend/go/kratos.md" },
-          { text: "Go Micro", link: "/backend/go/go-micro.md" },
-        ],
-      },
-      {
-        text: "Java 后端",
-        collapsed: true,
-        items: [
-          { text: "Spring", link: "/backend/java/spring/spring.md" },
-          { text: "SpringBoot", link: "/backend/java/spring/spring-boot.md" },
-          {
-            text: "SpringBoot 数据访问",
-            link: "/backend/java/spring/spring-boot-datasource.md",
-          },
-        ],
-      },
       { text: "Flask 框架", link: "/backend/python/flask.md" },
     ],
   },
@@ -114,10 +93,6 @@ export default [
     collapsed: true,
     items: [
       { text: "MySQL", link: "/database/mysql.md" },
-      { text: "PostgreSQL", link: "/database/postgresql.md" },
-      { text: "Redis", link: "/database/redis.md" },
-      { text: "MongoDB", link: "/database/mongodb.md" },
-      { text: "Neo4j", link: "/database/neo4j.md" },
     ],
   },
   {

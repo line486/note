@@ -1,17 +1,6 @@
 # 渐进式 Web 应用
 
-## 一、核心特征
-
-```mermaid
-graph TD
-A[PWA核心] --> B[可安装性]
-A --> C[离线能力]
-A --> D[原生体验]
-A --> E[推送通知]
-A --> F[后台同步]
-```
-
-## 二、技术实现体系
+## 技术实现体系
 
 ### 1. Web App Manifest
 
@@ -79,7 +68,7 @@ self.addEventListener("fetch", (e) => {
 });
 ```
 
-## 三、离线策略矩阵
+## 离线策略矩阵
 
 | 策略类型 | 适用场景 | 实现方式                                            |
 | -------- | -------- | --------------------------------------------------- |
@@ -88,7 +77,7 @@ self.addEventListener("fetch", (e) => {
 | 混合模式 | 动态内容 | `cache.match().then(cached => cached \|\| fetch())` |
 | 失效更新 | 版本控制 | `caches.delete(oldCache)`                           |
 
-## 四、高级能力实现
+## 高级能力实现
 
 ### 1. 后台同步
 
@@ -134,7 +123,7 @@ self.addEventListener("push", (e) => {
 });
 ```
 
-## 五、性能优化指标
+## 性能优化指标
 
 1. **核心指标**
    - 首次有效绘制 (FCP) < 1.8s
@@ -161,7 +150,7 @@ self.addEventListener("push", (e) => {
    imagemin *.png --out-dir=optimized
    ```
 
-## 六、调试工具链
+## 调试工具链
 
 1. **Chrome DevTools**
    - Application面板：查看Service Workers、Cache Storage
@@ -182,7 +171,7 @@ self.addEventListener("push", (e) => {
 | 安装性   | Web App Manifest Validator | 包含所有必填字段       |
 | 性能     | WebPageTest                | Speed Index < 3.5s     |
 
-## 七、安全规范
+## 安全规范
 
 1. **强制要求**
    - 必须使用HTTPS（localhost除外）
@@ -198,7 +187,7 @@ self.addEventListener("push", (e) => {
    add_header X-Content-Type-Options "nosniff";
    ```
 
-## 八、跨平台策略
+## 跨平台策略
 
 ### iOS适配方案
 
@@ -217,7 +206,7 @@ self.addEventListener("push", (e) => {
 <meta name="msapplication-config" content="/browserconfig.xml">
 ```
 
-## 九、版本更新策略
+## 版本更新策略
 
 ```javascript
 // 检测更新
@@ -234,17 +223,5 @@ const registerNewWorker = () => {
   });
 };
 ```
-
-## 十、未来演进方向
-
-1. **新标准**
-   - Web Share API（文件共享）
-   - Web Bluetooth（设备连接）
-   - File System Access API
-
-2. **性能突破**
-   - WebAssembly集成
-   - WebGPU加速
-   - Portals API实现无缝页面过渡
 
 > **升级建议**：定期使用[PWA Builder](https://www.pwabuilder.com/)检测兼容性，保持对最新API标准的跟踪。

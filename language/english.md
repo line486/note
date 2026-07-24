@@ -148,8 +148,8 @@
 | 数词   | I ate **two** carrots. _我吃了两根胡萝卜。_                                                            |
 | 副词   | I ate two carrots **quickly**. _我很快地吃了两根胡萝卜。_                                              |
 | 介词   | I ate two carrots **with** chopsticks. _我用筷子吃了两根胡萝卜。_                                      |
-| 叹词   | **Ah**, the carrot is tasty! _啊，胡萝卜好美味！_                                                      |
-| 连词   | I ate two carrots and a potato, **because** I was hungry. _我吃了两根胡萝卜和一个马铃薯，因为我饿了。_ |
+| 叹词   | **Ah**, the carrot is tasty! *啊，胡萝卜好美味！*                                                      |
+| 连词   | I ate two carrots and a potato, **because** I was hungry. *我吃了两根胡萝卜和一个马铃薯，因为我饿了。* |
 
 > [!NOTE]
 >
