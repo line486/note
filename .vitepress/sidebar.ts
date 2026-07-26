@@ -1,7 +1,6 @@
 export default [
   {
     text: "语言学习",
-    collapsed: true,
     items: [
       { text: "英语", link: "/language/english.md" },
       { text: "日语", link: "/language/japanese.md" },
@@ -9,7 +8,6 @@ export default [
   },
   {
     text: "计算机基础",
-    collapsed: true,
     items: [
       { text: "C 笔记", link: "/program/c.md" },
       { text: "ASCII 码对照表", link: "/program/ascii.md" },
@@ -18,7 +16,6 @@ export default [
   },
   {
     text: "编程语言与技术",
-    collapsed: true,
     items: [
       { text: "C++ 笔记", link: "/program/c++.md" },
       { text: "Python 笔记", link: "/program/python.md" },
@@ -30,13 +27,11 @@ export default [
   },
   {
     text: "算法与机器学习",
-    collapsed: true,
     items: [
       { text: "十大经典排序算法笔记", link: "/program/sorting-algorithms.md" },
       { text: "爬虫", link: "/program/web-crawler.md" },
       {
         text: "机器学习",
-        collapsed: true,
         items: [
           {
             text: "了解一下",
@@ -44,7 +39,6 @@ export default [
           },
           {
             text: "快速入门",
-            collapsed: true,
             items: [
               {
                 text: "数据分析与可视化工具",
@@ -62,21 +56,18 @@ export default [
   },
   {
     text: "后端开发",
-    collapsed: true,
     items: [
       { text: "Flask 框架", link: "/backend/python/flask.md" },
     ],
   },
   {
     text: "前端开发",
-    collapsed: true,
     items: [
       { text: "语言代码表", link: "/frontend/language-code.md" },
       { text: "Vite", link: "/frontend/vite.md" },
       { text: "Vue", link: "/frontend/vue.md" },
       {
         text: "React",
-        collapsed: true,
         items: [
           { text: "基础入门", link: "/frontend/react/react.md" },
           { text: "React 路由", link: "/frontend/react/react-router.md" },
@@ -90,19 +81,16 @@ export default [
   },
   {
     text: "数据库",
-    collapsed: true,
     items: [
       { text: "MySQL", link: "/database/mysql.md" },
     ],
   },
   {
     text: "版本控制",
-    collapsed: true,
     items: [{ text: "Git", link: "/version_control/git.md" }],
   },
   {
     text: "部署与运维",
-    collapsed: true,
     items: [
       { text: "Linux", link: "/server/linux.md" },
       { text: "Nginx", link: "/server/nginx.md" },
@@ -115,7 +103,6 @@ export default [
   },
   {
     text: "软件与开发工具",
-    collapsed: true,
     items: [
       { text: "Office 文档", link: "/software/office.md" },
       { text: "VS Code 编译器", link: "/software/vscode.md" },
@@ -128,7 +115,6 @@ export default [
   },
   {
     text: "硬件与外设",
-    collapsed: true,
     items: [
       { text: "腹灵F12 68键 RGB", link: "/peripheral/fuling-f12.md" },
       { text: "高漫数位板", link: "/peripheral/gaomon.md" },
@@ -137,7 +123,6 @@ export default [
   },
   {
     text: "设计与创作",
-    collapsed: true,
     items: [
       { text: "Blender 建模", link: "/design/blender.md" },
       { text: "绘画", link: "/design/painting.md" },
@@ -146,7 +131,6 @@ export default [
   },
   {
     text: "兴趣与收藏",
-    collapsed: true,
     items: [{ text: "手办", link: "/pastimes/handmade.md" }],
   },
 ];

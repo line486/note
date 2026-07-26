@@ -5,10 +5,7 @@ import DefaultTheme from "vitepress/theme";
 import { h, nextTick, onMounted, watch } from "vue";
 import { BProgress } from "./bprogress";
 import "./bprogress.css";
-import BackToTop from "./components/backtotop.vue";
 import "./style.css";
-// organize-imports-ignore
-import "vitepress-theme-round";
 
 export default {
   extends: DefaultTheme,
@@ -30,7 +27,6 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       // 指定组件使用doc-footer-before插槽
-      "doc-footer-before": () => h(BackToTop),
     });
   },
   enhanceApp({ app, router, siteData }: EnhanceAppContext) {
