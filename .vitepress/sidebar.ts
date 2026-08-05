@@ -56,9 +56,7 @@ export default [
   },
   {
     text: "后端开发",
-    items: [
-      { text: "Flask 框架", link: "/backend/python/flask.md" },
-    ],
+    items: [{ text: "Flask 框架", link: "/backend/python/flask.md" }],
   },
   {
     text: "前端开发",
@@ -81,9 +79,7 @@ export default [
   },
   {
     text: "数据库",
-    items: [
-      { text: "MySQL", link: "/database/mysql.md" },
-    ],
+    items: [{ text: "MySQL", link: "/database/mysql.md" }],
   },
   {
     text: "版本控制",

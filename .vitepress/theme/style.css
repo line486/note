@@ -21,6 +21,15 @@ img {
   scrollbar-width: thin;
 }
 
+/**
+ * Component: custom-block
+ * -------------------------------------------------------------------------- */
+.custom-block-title {
+  text-transform: lowercase;
+}
+.custom-block-title::first-letter {
+  text-transform: uppercase;
+}
 
 /**
  * Component: medium-zoom
