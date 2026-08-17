@@ -23,16 +23,16 @@
 
 ## 开发
 
-[bun](https://bun.com/) 安装依赖、编译、打包。
+[pnpm](https://pnpm.io/) 安装依赖、编译、打包。
 
 ```shell
-bun install
+pnpm install
 ```
 
 ```shell
-bun run dev
+pnpm run dev
 ```
 
 ```shell
-bun run build
+pnpm run build
 ```

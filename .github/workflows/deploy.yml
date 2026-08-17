@@ -36,20 +36,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      # 安装 Bun
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+      # 安装 pnpm 和 Node.js
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: 24
+          cache: pnpm
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
 
       - name: Install dependencies
-        run: bun install
+        run: pnpm install --frozen-lockfile
 
       - name: Build with VitePress
-        run: bun run build
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

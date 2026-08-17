@@ -5,17 +5,17 @@ Personal learning notes site built with **VitePress 2.0.0-alpha.18**, written in
 ## Quick commands
 
 ```bash
-bun install          # install deps (use bun, not npm/yarn/pnpm)
-bun run dev          # local dev server
-bun run build        # build to .vitepress/dist
-bun run prettier     # format all files
+pnpm install         # install deps (use pnpm, not npm/yarn/bun)
+pnpm run dev         # local dev server
+pnpm run build       # build to .vitepress/dist
+pnpm run prettier    # format all files
 ```
 
 ## Adding content
 
 1. Create a `.md` file in the appropriate directory (`language/`, `program/`, `backend/`, `frontend/`, `database/`, `version_control/`, `server/`, `software/`, `peripheral/`, `design/`, `pastimes/`).
 2. Add the entry to `.vitepress/sidebar.ts` — sidebar is manually maintained, not auto-generated.
-3. Run `bun run prettier` to format.
+3. Run `pnpm run prettier` to format.
 
 ## Key config files
 
