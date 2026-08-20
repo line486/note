@@ -14,7 +14,7 @@ pnpm run prettier    # format all files
 ## Adding content
 
 1. Create a `.md` file in the appropriate directory (`language/`, `program/`, `backend/`, `frontend/`, `database/`, `version_control/`, `server/`, `software/`, `peripheral/`, `design/`, `pastimes/`).
-2. Add the entry to `.vitepress/sidebar.ts` — sidebar is manually maintained, not auto-generated.
+2. Add the entry to `.vitepress/sidebar.mjs` — sidebar is manually maintained, not auto-generated.
 3. Run `pnpm run prettier` to format.
 
 ## Key config files
@@ -22,7 +22,7 @@ pnpm run prettier    # format all files
 | File                           | Purpose                                              |
 | ------------------------------ | ---------------------------------------------------- |
 | `.vitepress/config.mts`        | Site config, nav, search, markdown options           |
-| `.vitepress/sidebar.ts`        | Manual sidebar navigation structure                  |
+| `.vitepress/sidebar.mjs`       | Manual sidebar navigation structure                  |
 | `.vitepress/theme/`            | Custom theme (extends DefaultTheme)                  |
 | `.github/workflows/deploy.yml` | GitHub Pages deployment (triggers on push to `main`) |
 | `vercel.json`                  | Vercel config (`cleanUrls` only)                     |

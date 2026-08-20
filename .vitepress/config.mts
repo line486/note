@@ -1,5 +1,5 @@
 import { DefaultTheme, defineConfig } from "vitepress";
-import sidebar from "./sidebar";
+import sidebar from "./sidebar.mjs";
 
 const GITHUB_URL: string = "https://github.com/sugarscat/note";
 const BASE_URL: string = process.env.BASE_URL || "/";
